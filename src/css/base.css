@@ -1,28 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 @import url(/src/css/components/header.css);
+@import url(/src/css/home.css);
 
 @import url(./components/footer.css);
 :root {
-    --primary-color: #8A3DB5;
-    --primary-light: #F0E3F7;
-    --primary-dark: #310D75;
-    --secondary-color: #44DAD0;
-    --secondary-dark: #1DA09B;
-    --secondary-light: #D5F5F6;
-    --tertiary-dark: #C1894A;
-    --tertiary-color: #F8CA2F;
-    --tertiary-light: #FDF0C4;
-    --text-light: #9E9E9E;
-    --text-color: #333333;
+  --primary-color: #8a3db5;
+  --primary-light: #f0e3f7;
+  --primary-dark: #310d75;
+  --secondary-color: #44dad0;
+  --secondary-dark: #1da09b;
+  --secondary-light: #d5f5f6;
+  --tertiary-dark: #c1894a;
+  --tertiary-color: #f8ca2f;
+  --tertiary-light: #fdf0c4;
+  --text-light: #9e9e9e;
+  --text-color: #333333;
 }
 
 * {
-    font-family: 'Poppins', sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    color: var(--text-color);
+  color: var(--text-color);
 }
