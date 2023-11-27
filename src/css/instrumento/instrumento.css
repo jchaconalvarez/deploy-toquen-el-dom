@@ -1,0 +1,177 @@
+/*instrumento desktop */
+@media (min-width: 1000px) {
+    .instrument-container--desktop {
+        display: block;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px 0px;
+
+        background-image: url(../../../public/assets/bateria/fondo.jpg);
+        max-width: 1400px;
+        margin: 5rem auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 750px;
+        position: relative;
+    }
+
+    .instrument-container--desktop * {
+        position: absolute;
+    }
+
+    .instrument-container__kick {
+        background-image: url(../../../public/assets/bateria/kick.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 40%;
+        width: 30%;
+        margin-top: 17.5%;
+        margin-left: 32%;
+    }
+
+    .instrument-container__snare {
+        background-image: url(../../../public/assets/bateria/snare.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 32%;
+        width: 32%;
+        margin-left: 13%;
+        margin-top: 32%;
+    }
+
+    .instrument-container__floor {
+        background-image: url(../../../public/assets/bateria/floor.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 34%;
+        width: 34%;
+        margin-top: 30%;
+        margin-left: 50%;
+        z-index: 3;
+    }
+
+    .instrument-container__toom--one {
+        background-image: url(../../../public/assets/bateria/tom-1.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 26%;
+        width: 26%;
+        margin-top: 19%;
+        margin-left: 20%;
+    }
+
+    .instrument-container__toom--two {
+        background-image: url(../../../public/assets/bateria/tom-2.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 26%;
+        width: 26%;
+        margin-top: 8%;
+        margin-left: 45%;
+    }
+
+    .instrument-container__toom--three {
+        background-image: url(../../../public/assets/bateria/tom-3.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 26%;
+        width: 26%;
+        margin-top: 19%;
+        margin-left: 54%;
+    }
+
+    .instrument-container__ride {
+        background-image: url(../../../public/assets/bateria/ride.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 34%;
+        width: 34%;
+        margin-top: 9%;
+        margin-left: 60%;
+    }
+
+    .instrument-container__closehh {
+        background-image: url(../../../public/assets/bateria/close-hh.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 24%;
+        width: 24%;
+        margin-top: 19%;
+        margin-left: 11%;
+    }
+
+    .instrument-container__openhh {
+        background-image: url(../../../public/assets/bateria/open-hh.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 24%;
+        width: 24%;
+        margin-top: 29%;
+        margin-left: 5%;
+    }
+
+    .instrument-container__crash--one {
+        background-image: url(../../../public/assets/bateria/crash-1.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 30%;
+        width: 30%;
+        margin-top: 6%;
+        margin-left: 15%;
+    }
+
+    .instrument-container__crash--two {
+        background-image: url(../../../public/assets/bateria/crash-2.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 30%;
+        width: 30%;
+        margin-top: 27%;
+        margin-left: 65%;
+        z-index: 4;
+    }
+
+
+    .instrument-container__pedal {
+        background-image: url(../../../public/assets/bateria/pedal.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 8%;
+        width: 4%;
+        margin-top: 33%;
+        margin-left: 46.2%;
+    }
+
+    .instrument-container__stick1 {
+        background-image: url(../../../public/assets/bateria/stick-1.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 22%;
+        width: 6%;
+        margin-top: 40%;
+        margin-left: 40%;
+    }
+
+    .instrument-container__stick2 {
+        background-image: url(../../../public/assets/bateria/stick-2.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 22%;
+        width: 6%;
+        margin-top: 40%;
+        margin-left: 52%;
+    }
+}

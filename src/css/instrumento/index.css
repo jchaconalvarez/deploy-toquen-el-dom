@@ -1,0 +1,88 @@
+@import url("./instrumento.css");
+@import url("./acordeon.css");
+
+
+.instrument-content {
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.instrument-content__subtitle {
+    color: var(--primary-dark);
+    font-size: 1rem;
+    margin-bottom: 0.5rem
+}
+
+.instrument-content__title {
+    color: var(--secondary-dark);
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+.instrument-content__title span {
+    display: block;
+}
+
+.instrument-container__list ul li {
+    list-style: none;
+}
+
+.instrument-container--mobile {
+    max-width: 100%;
+}
+
+.instrument-container--mobile img {
+    max-width: 100%;
+}
+
+.instrument-content p {
+    margin-bottom: 1.5rem;
+}
+
+.instrument-container__subtitle-two {
+    color: var(--primary-dark);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 2rem 0 1.2rem;
+}
+
+.instrument-content__keyword {
+    margin-bottom: 4rem;
+}
+
+.instrument-content__keyword h6 {
+    color: var(--primary-dark);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 4.2rem 0 3.5rem;
+}
+
+.instrument-content__keyword img {
+    max-width: 100%;
+}
+
+
+@media (min-width: 1000px) {
+
+
+    .instrument-content__subtitle {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .instrument-content__title {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .instrument-content__title span {
+        display: inline;
+
+    }
+
+    .instrument-container--mobile {
+        display: none;
+    }
+}

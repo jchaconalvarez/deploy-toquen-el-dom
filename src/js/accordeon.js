@@ -5,10 +5,10 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 
         const accordionItemBody = accordionItemHeader.nextElementSibling;
         if (accordionItemHeader.classList.contains("active")) {
-            accordionItemBody.style.maxWidth = accordionItemBody.scrollWidth + "px";
+            accordionItemBody.style.maxHeight = accordionItemBody.scrollWidth + "px";
         }
         else {
-            accordionItemBody.style.maxWidth = 0;
+            accordionItemBody.style.maxHeight = 0;
         }
 
     });
