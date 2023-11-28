@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 @import url(/src/css/components/header.css);
 @import url(/src/css/home.css);
+@import url('../css/instrumento/index.css');
 
 @import url(./components/footer.css);
+
 :root {
   --primary-color: #8a3db5;
   --primary-light: #f0e3f7;
@@ -26,4 +28,5 @@
 
 body {
   color: var(--text-color);
+  font-size: 1rem;
 }
