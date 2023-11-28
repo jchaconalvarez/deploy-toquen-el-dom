@@ -1,0 +1,114 @@
+.instrument-content__description__accordion--item {
+    margin-top: 1rem;
+}
+
+.accordion--item-header {
+    border-radius: 1rem;
+    border: 1px solid var(--secondary-dark);
+    color: var(--secondary-dark);
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.accordion--item-header::after {
+    content: "\002B";
+    font-size: 1.5rem;
+    position: absolute;
+    right: 1rem;
+}
+
+.accordion--item-header.active::after {
+    content: "\2212";
+}
+
+.accordion--item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.active {
+    /* background-color: var(--secondary-dark); */
+    color: white;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.item-1 .accordion--item-header.active {
+    background-color: var(--secondary-dark);
+}
+
+
+.item-2 .accordion--item-header.active {
+    border: unset;
+    background-color: var(--primary-color);
+}
+
+.item-2 .accordion--item-body-content {
+    background-color: var(--primary-light);
+
+}
+
+.item-3 .accordion--item-header.active {
+    border: unset;
+    background-color: var(--tertiary-dark);
+}
+
+.item-3 .accordion--item-body-content {
+    background-color: var(--tertiary-light);
+
+}
+
+.item-4 .accordion--item-header.active {
+    border: unset;
+    background-color: #FF6B57;
+}
+
+.item-4 .accordion--item-body-content {
+    background-color: #f99b8f;
+
+}
+
+
+
+.accordion--item-body-content {
+    padding: 1.5rem;
+    line-height: 1.5rem;
+    background-color: #e1fafb;
+    color: var(--text-color);
+
+
+}
+
+.accordion--item-body-content ul {
+    padding: 1rem;
+
+}
+
+@media(min-width:600px) {
+    .instrument-content__description__accordion {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        height: 100%;
+    }
+
+    .instrument-content__description__accordion>* {
+        flex-basis: calc(50% - 1rem);
+        height: 100%;
+    }
+
+    .accordion--item-body-content {
+        padding: 1.5rem 2.5rem;
+    }
+}
