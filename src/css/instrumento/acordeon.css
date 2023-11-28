@@ -90,7 +90,7 @@
 }
 
 .accordion--item-body-content ul {
-    padding: 1rem;
+    padding: 0 1rem;
 
 }
 
@@ -112,3 +112,5 @@
         padding: 1.5rem 2.5rem;
     }
 }
+
+@media (min-width: 1000px) {}
