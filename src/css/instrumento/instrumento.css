@@ -1,16 +1,20 @@
-/*instrumento desktop */
-@media (min-width: 1000px) {
-    .instrument-container--desktop {
-        display: block;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px 0px;
+@media(min-width:360px) {
+    .rotation-wrapper {
+        position: relative;
+        width: 100%;
+        height: 80vw;
+        padding-bottom: 100%;
+    }
 
+    .instrument-container--desktop {
+        width: 100%;
+        height: 90vw;
+        transform: rotate(90deg);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px 0px;
         background-image: url(../../../public/assets/bateria/fondo.jpg);
-        max-width: 1400px;
-        margin: 2.5rem auto;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        height: 750px;
         position: relative;
     }
 
@@ -23,9 +27,9 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
-        height: 40%;
+        height: 30%;
         width: 30%;
-        margin-top: 17.5%;
+        margin-top: 29%;
         margin-left: 32%;
     }
 
@@ -34,10 +38,11 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        height: 32%;
-        width: 32%;
-        margin-left: 13%;
-        margin-top: 32%;
+        height: 23%;
+        width: 18%;
+        margin-left: 20%;
+        margin-top: 33%;
+
     }
 
     .instrument-container__floor {
@@ -45,10 +50,10 @@
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
-        height: 34%;
-        width: 34%;
-        margin-top: 30%;
-        margin-left: 50%;
+        height: 25%;
+        width: 19%;
+        margin-top: 32%;
+        margin-left: 58%;
         z-index: 3;
     }
 
@@ -57,10 +62,10 @@
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
-        height: 26%;
-        width: 26%;
-        margin-top: 19%;
-        margin-left: 20%;
+        height: 18%;
+        width: 15%;
+        margin-top: 22%;
+        margin-left: 24%;
     }
 
     .instrument-container__toom--two {
@@ -68,10 +73,10 @@
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
-        height: 26%;
-        width: 26%;
-        margin-top: 8%;
-        margin-left: 45%;
+        height: 18%;
+        width: 15%;
+        margin-top: 22%;
+        margin-left: 52%;
     }
 
     .instrument-container__toom--three {
@@ -79,10 +84,11 @@
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
-        height: 26%;
-        width: 26%;
-        margin-top: 19%;
-        margin-left: 54%;
+        height: 18%;
+        width: 15%;
+        margin-top: 22%;
+        margin-left: 65%;
+        z-index: 5;
     }
 
     .instrument-container__ride {
@@ -91,9 +97,10 @@
         background-size: contain;
         background-repeat: no-repeat;
         height: 34%;
-        width: 34%;
-        margin-top: 9%;
-        margin-left: 60%;
+        width: 20%;
+        margin-top: 15%;
+        margin-left: 75%;
+        z-index: 6;
     }
 
     .instrument-container__closehh {
@@ -102,9 +109,11 @@
         background-size: contain;
         background-repeat: no-repeat;
         height: 24%;
-        width: 24%;
-        margin-top: 19%;
-        margin-left: 11%;
+        width: 14%;
+        margin-top: 25%;
+        margin-left: 10%;
+        z-index: 4;
+
     }
 
     .instrument-container__openhh {
@@ -113,9 +122,9 @@
         background-size: contain;
         background-repeat: no-repeat;
         height: 24%;
-        width: 24%;
-        margin-top: 29%;
-        margin-left: 5%;
+        width: 14%;
+        margin-top: 35%;
+        margin-left: 4%;
     }
 
     .instrument-container__crash--one {
@@ -124,9 +133,9 @@
         background-size: contain;
         background-repeat: no-repeat;
         height: 30%;
-        width: 30%;
-        margin-top: 6%;
-        margin-left: 15%;
+        width: 18%;
+        margin-top: 9%;
+        margin-left: 11%;
     }
 
     .instrument-container__crash--two {
@@ -134,11 +143,10 @@
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
-        height: 30%;
-        width: 30%;
-        margin-top: 27%;
-        margin-left: 65%;
-        z-index: 4;
+        height: 25%;
+        width: 18%;
+        margin-top: 35%;
+        margin-left: 75%;
     }
 
 
@@ -159,8 +167,8 @@
         background-size: contain;
         background-repeat: no-repeat;
         height: 22%;
-        width: 6%;
-        margin-top: 40%;
+        width: 2%;
+        margin-top: 60%;
         margin-left: 40%;
     }
 
@@ -170,8 +178,383 @@
         background-size: contain;
         background-repeat: no-repeat;
         height: 22%;
-        width: 6%;
-        margin-top: 40%;
+        width: 2%;
+        margin-top: 60%;
         margin-left: 52%;
+    }
+
+    .instrument-container__pedal {
+        background-image: url(../../../public/assets/bateria/pedal.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 16%;
+        width: 10%;
+        margin-top: 47.5%;
+        margin-left: 45%;
+    }
+}
+
+/*instrumento desktop */
+@media (min-width: 1000px) {
+    .instrument-container--desktop {
+        transform: none;
+        display: block;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px 0px;
+        background-image: url(../../../public/assets/bateria/fondo.jpg);
+        max-width: 1400px;
+        margin: 2.5rem auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 750px;
+        position: relative;
+    }
+
+    .instrument-container--desktop * {
+        position: absolute;
+    }
+
+    .instrument-container__kick {
+        background-image: url(../../../public/assets/bateria/kick.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 30%;
+        width: 30%;
+        margin-top: 29%;
+        margin-left: 32%;
+    }
+
+    .instrument-container__snare {
+        background-image: url(../../../public/assets/bateria/snare.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 23%;
+        width: 18%;
+        margin-left: 20%;
+        margin-top: 33%;
+
+    }
+
+    .instrument-container__floor {
+        background-image: url(../../../public/assets/bateria/floor.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 25%;
+        width: 19%;
+        margin-top: 32%;
+        margin-left: 58%;
+        z-index: 3;
+    }
+
+    .instrument-container__toom--one {
+        background-image: url(../../../public/assets/bateria/tom-1.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 18%;
+        width: 15%;
+        margin-top: 22%;
+        margin-left: 24%;
+    }
+
+    .instrument-container__toom--two {
+        background-image: url(../../../public/assets/bateria/tom-2.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 18%;
+        width: 15%;
+        margin-top: 22%;
+        margin-left: 52%;
+    }
+
+    .instrument-container__toom--three {
+        background-image: url(../../../public/assets/bateria/tom-3.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 18%;
+        width: 15%;
+        margin-top: 22%;
+        margin-left: 65%;
+        z-index: 5;
+    }
+
+    .instrument-container__ride {
+        background-image: url(../../../public/assets/bateria/ride.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 34%;
+        width: 20%;
+        margin-top: 15%;
+        margin-left: 75%;
+        z-index: 6;
+    }
+
+    .instrument-container__closehh {
+        background-image: url(../../../public/assets/bateria/close-hh.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 24%;
+        width: 14%;
+        margin-top: 25%;
+        margin-left: 10%;
+        z-index: 4;
+
+    }
+
+    .instrument-container__openhh {
+        background-image: url(../../../public/assets/bateria/open-hh.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 24%;
+        width: 14%;
+        margin-top: 35%;
+        margin-left: 4%;
+    }
+
+    .instrument-container__crash--one {
+        background-image: url(../../../public/assets/bateria/crash-1.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 30%;
+        width: 18%;
+        margin-top: 9%;
+        margin-left: 11%;
+    }
+
+    .instrument-container__crash--two {
+        background-image: url(../../../public/assets/bateria/crash-2.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 25%;
+        width: 18%;
+        margin-top: 35%;
+        margin-left: 75%;
+    }
+
+
+    .instrument-container__pedal {
+        background-image: url(../../../public/assets/bateria/pedal.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 8%;
+        width: 4%;
+        margin-top: 33%;
+        margin-left: 46.2%;
+    }
+
+    .instrument-container__stick1 {
+        background-image: url(../../../public/assets/bateria/stick-1.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 22%;
+        width: 2%;
+        margin-top: 60%;
+        margin-left: 40%;
+    }
+
+    .instrument-container__stick2 {
+        background-image: url(../../../public/assets/bateria/stick-2.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 22%;
+        width: 2%;
+        margin-top: 60%;
+        margin-left: 52%;
+    }
+
+    .instrument-container__pedal {
+        background-image: url(../../../public/assets/bateria/pedal.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 16%;
+        width: 10%;
+        margin-top: 47.5%;
+        margin-left: 45%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .instrument-container__kick {
+        margin-top: 25%;
+    }
+
+    .instrument-container__snare {
+        height: 25%;
+        width: 20%;
+        margin-left: 18%;
+        margin-top: 30%;
+    }
+
+    .instrument-container__toom--one {
+        height: 22%;
+        width: 15%;
+        margin-top: 18%;
+        margin-left: 22%;
+    }
+
+    .instrument-container__toom--two {
+        height: 24%;
+        width: 15%;
+        margin-top: 18%;
+        margin-left: 52%;
+    }
+
+    .instrument-container__toom--three {
+        height: 24%;
+        width: 15%;
+    }
+
+    .instrument-container__pedal {
+        margin-top: 41%;
+    }
+
+    .instrument-container__stick1,
+    .instrument-container__stick2 {
+        margin-top: 48%;
+    }
+
+    .instrument-container__stick2 {
+        margin-left: 55%;
+    }
+
+}
+
+@media (min-width: 1300px) {
+    .instrument-container--desktop {
+        height: 800px;
+    }
+
+    .instrument-container__toom--two {
+        margin-top: 15%;
+    }
+
+    .instrument-container__floor {
+        margin-top: 28%;
+        margin-left: 55%;
+    }
+
+    .instrument-container__crash--two {
+        margin-top: 32%;
+        margin-left: 68%;
+        z-index: 5;
+    }
+
+    .instrument-container__toom--three {
+        margin-top: 20%;
+        margin-left: 62%;
+    }
+
+    .instrument-container__kick {
+        height: 35%;
+    }
+
+    .instrument-container__pedal {
+        margin-top: 42%;
+    }
+
+    .instrument-container__stick1,
+    .instrument-container__stick2 {
+        margin-top: 45%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .instrument-container__kick {
+        height: 38%;
+        margin-top: 15%;
+    }
+
+    .instrument-container__toom--two {
+        height: 28%;
+        margin-top: 6%;
+        margin-left: 48%;
+    }
+
+    .instrument-container__toom--three {
+        height: 28%;
+        margin-top: 12%;
+        margin-left: 60%;
+    }
+
+    .instrument-container__floor {
+        margin-top: 24%;
+        height: 35%;
+        margin-left: 62%;
+        z-index: 6;
+    }
+
+    .instrument-container__ride {
+        height: 36%;
+        margin-top: 2%;
+        margin-left: 70%;
+    }
+
+    .instrument-container__crash--two {
+        margin-top: 8%;
+        transform: rotate(-40deg);
+        margin-left: 11%;
+    }
+
+    .instrument-container__crash--two {
+        margin-top: 21%;
+        margin-left: 76%;
+        z-index: 7;
+    }
+
+
+    .instrument-container__toom--one {
+        height: 24%;
+        margin-top: 15%;
+        margin-left: 25%;
+    }
+
+    .instrument-container__snare {
+        height: 30%;
+        margin-left: 23%;
+        margin-top: 30%;
+    }
+
+    .instrument-container__openhh {
+        margin-left: 12%;
+        margin-top: 35%;
+        height: 21%;
+    }
+
+    .instrument-container__closehh {
+        margin-top: 25%;
+        margin-left: 15%;
+        height: 21%;
+    }
+
+    .instrument-container__pedal {
+        margin-top: 32%;
+    }
+
+    .instrument-container__stick1,
+    .instrument-container__stick2 {
+        margin-top: 44%;
+    }
+
+    .instrument-container__stick1 {
+        margin-left: 45%;
+    }
+
+    .instrument-container__stick2 {
+        margin-left: 60%;
     }
 }
