@@ -10,7 +10,8 @@
 .instrument-content__subtitle {
     color: var(--primary-dark);
     font-size: 1rem;
-    margin-bottom: 0.5rem
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
 }
 
 .instrument-content__title {
@@ -63,8 +64,25 @@
     max-width: 100%;
 }
 
+.instrument-content__description {
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 800px) {
+    .instrument-content {
+        max-width: 800px;
+        margin: 0 auto;
+
+    }
+}
+
 
 @media (min-width: 1000px) {
+    .instrument-content {
+        max-width: 1440px;
+        margin: 0 auto;
+
+    }
 
 
     .instrument-content__subtitle {
@@ -85,4 +103,18 @@
     .instrument-container--mobile {
         display: none;
     }
+
+    .instrument-content__description {
+        margin-bottom: 4rem;
+    }
+
+    .instrument-content__keyword figure {
+        display: flex;
+        justify-content: center;
+    }
+
+    .instrument-content__keyword figure img {
+        width: 90%;
+    }
+
 }

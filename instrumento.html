@@ -9,6 +9,21 @@
 </head>
 
 <body>
+    <header class="header">
+        <a href="./index.html"><img class="header__logo" src="/public/assets/img/logo.svg"
+                alt="Logo Toquen el DOM" /></a>
+        <nav class="header__navbar">
+            <div class="header__navbar--container">
+                <a class="header__navbar--container-instruments" href="#">Instruments</a>
+            </div>
+            <div class="header__navbar--container">
+                <a class="header__navbar--container-about" href="#">About us</a>
+            </div>
+            <div class="header__navbar--container">
+                <a class="header__navbar--container-contact" href="#">Contact</a>
+            </div>
+        </nav>
+    </header>
     <main>
         <section class="instrument-content">
             <h4 class="instrument-content__subtitle">Graba, aprende, toca y juega</h4>
@@ -117,13 +132,56 @@
                             </div>
                         </div>
                     </div>
+                    <div class="instrument-content__description__accordion--item item-4">
+                        <div class="accordion--item-header">
+                            Características Destacadas
+                        </div>
+                        <div class="accordion--item-body">
+                            <div class="accordion--item-body-content">
+                                <ul>
+                                    <li> Cada componente de la batería tiene una tecla específica asignada, facilitando
+                                        la creación de ritmos intuitivos.</li>
+                                    <li> La batería virtual ofrece una amplia gama de sonidos auténticos, permitiéndote
+                                        explorar diferentes estilos musicales</li>
+                                    <li>No se requieren conocimientos avanzados..</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
 
         </section>
     </main>
+    <footer class="footer">
+        <section class="container-footer">
+            <div class="icons-footer">
+                <a href="#">
+                    <img src="./public/assets/icons/mdi_instagram.png" alt="icons instagram" />
+                </a>
+                <a href="#">
+                    <img src="./public/assets/icons/mdi_twitter.png" alt="icons twitter" />
+                </a>
+                <a href="#">
+                    <img src="./public/assets/icons/ri_facebook-fill.png" alt="icons facebook" />
+                </a>
+                <a href="#">
+                    <img src="./public/assets/icons/ri_linkedin-fill.png" alt="icons linkedin" />
+                </a>
+                <a href="#">
+                    <img src="./public/assets/icons/ri_youtube-fill.png" alt="icons youtube" />
+                </a>
+            </div>
+            <div class="links-footer">
+                <a href="#">Instruments</a>
+                <a href="#">About us</a>
+                <a href="#">Contact</a>
+            </div>
+        </section>
+    </footer>
     <script src="../src/js/accordeon.js"></script>
 </body>
+
 
 </html>
