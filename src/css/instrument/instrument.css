@@ -1,213 +1,233 @@
-@media(min-width:360px) {
-    .rotation-wrapper {
-        position: relative;
-        width: 100%;
-        height: 80vw;
-        padding-bottom: 100%;
-    }
+.rotation-wrapper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
 
+.instrument-container--desktop {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px 0px;
+    background-image: url(../../../public/assets/drum/fondo-mobile.jpg);
+    max-width: 1400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 35rem;
+    position: relative;
+}
+
+.instrument-container--desktop * {
+    position: absolute;
+}
+
+.instrument-container__kick {
+    background-image: url(../../../public/assets/drum/kick.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: rotate(90deg);
+    height: 20%;
+    width: 45%;
+    margin-top: 65%;
+    margin-left: 20%;
+}
+
+.instrument-container__snare {
+    background-image: url(../../../public/assets/drum/snare.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 18%;
+    width: 26%;
+    transform: rotate(90deg);
+    margin-left: 20%;
+    margin-top: 35%;
+}
+
+.instrument-container__floor {
+    background-image: url(../../../public/assets/drum/floor.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 18%;
+    width: 28%;
+    transform: rotate(90deg);
+    margin-left: 18%;
+    margin-top: 110%;
+    z-index: 3;
+}
+
+.instrument-container__toom--one {
+    background-image: url(../../../public/assets/drum/tom-1.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 16%;
+    width: 22%;
+    transform: rotate(90deg);
+    margin-top: 40%;
+    margin-left: 40%;
+}
+
+.instrument-container__toom--two {
+    background-image: url(../../../public/assets/drum/tom-2.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 16%;
+    width: 22%;
+    transform: rotate(90deg);
+    margin-top: 92%;
+    margin-left: 30%;
+}
+
+.instrument-container__toom--three {
+    background-image: url(../../../public/assets/drum/tom-3.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 16%;
+    width: 22%;
+    transform: rotate(90deg);
+    margin-top: 92%;
+    margin-left: 50%;
+}
+
+.instrument-container__ride {
+    background-image: url(../../../public/assets/drum/ride.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 22%;
+    width: 37%;
+    margin-top: 110%;
+    margin-left: 40%;
+    z-index: 6;
+    transform: rotate(90deg);
+}
+
+
+.instrument-container__closehh {
+    background-image: url(../../../public/assets/drum/close-hh.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 16%;
+    width: 25%;
+    transform: rotate(90deg);
+    margin-top: 16%;
+    margin-left: 28%;
+    z-index: 4;
+}
+
+
+.instrument-container__openhh {
+    background-image: url(../../../public/assets/drum/open-hh.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 16%;
+    width: 25%;
+    transform: rotate(90deg);
+    margin-top: 18%;
+    margin-left: 10%;
+}
+
+.instrument-container__crash--one {
+    background-image: url(../../../public/assets/drum/crash-1.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 25%;
+    width: 30%;
+    transform: rotate(90deg);
+    margin-top: 15%;
+    margin-left: 50%;
+    z-index: 5;
+}
+
+
+.instrument-container__crash--two {
+    background-image: url(../../../public/assets/drum/crash-2.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 20%;
+    width: 30%;
+    transform: rotate(90deg);
+    margin-top: 128%;
+    margin-left: 20%;
+    z-index: 5;
+}
+
+
+.instrument-container__pedal {
+    background-image: url(../../../public/assets/drum/pedal.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 10%;
+    width: 12%;
+    margin-top: 74%;
+    margin-left: 18%;
+    transform: rotate(90deg);
+}
+
+.instrument-container__stick1 {
+    background-image: url(../../../public/assets/drum/stick-1.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(90deg);
+    height: 12%;
+    width: 2%;
+    margin-top: 60%;
+    margin-left: 15%;
+}
+
+.instrument-container__stick2 {
+    background-image: url(../../../public/assets/drum/stick-2.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(90deg);
+    height: 12%;
+    width: 2%;
+    margin-top: 90%;
+    margin-left: 15%;
+}
+
+@media (min-width: 400px) {
     .instrument-container--desktop {
-        width: 100%;
-        height: 90vw;
-        transform: rotate(90deg);
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px 0px;
-        background-image: url(../../../public/assets/drum/fondo.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        position: relative;
-    }
-
-    .instrument-container--desktop * {
-        position: absolute;
-    }
-
-    .instrument-container__kick {
-        background-image: url(../../../public/assets/drum/kick.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        height: 30%;
-        width: 30%;
-        margin-top: 29%;
-        margin-left: 32%;
-    }
-
-    .instrument-container__snare {
-        background-image: url(../../../public/assets/drum/snare.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        height: 23%;
-        width: 18%;
-        margin-left: 20%;
-        margin-top: 33%;
-
-    }
-
-    .instrument-container__floor {
-        background-image: url(../../../public/assets/drum/floor.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 25%;
-        width: 19%;
-        margin-top: 32%;
-        margin-left: 58%;
-        z-index: 3;
-    }
-
-    .instrument-container__toom--one {
-        background-image: url(../../../public/assets/drum/tom-1.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 18%;
-        width: 15%;
-        margin-top: 22%;
-        margin-left: 24%;
-    }
-
-    .instrument-container__toom--two {
-        background-image: url(../../../public/assets/drum/tom-2.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 18%;
-        width: 15%;
-        margin-top: 22%;
-        margin-left: 52%;
-    }
-
-    .instrument-container__toom--three {
-        background-image: url(../../../public/assets/drum/tom-3.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 18%;
-        width: 15%;
-        margin-top: 22%;
-        margin-left: 65%;
-        z-index: 5;
-    }
-
-    .instrument-container__ride {
-        background-image: url(../../../public/assets/drum/ride.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 34%;
-        width: 20%;
-        margin-top: 15%;
-        margin-left: 75%;
-        z-index: 6;
-    }
-
-    .instrument-container__closehh {
-        background-image: url(../../../public/assets/drum/close-hh.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 24%;
-        width: 14%;
-        margin-top: 25%;
-        margin-left: 10%;
-        z-index: 4;
-
-    }
-
-    .instrument-container__openhh {
-        background-image: url(../../../public/assets/drum/open-hh.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 24%;
-        width: 14%;
-        margin-top: 35%;
-        margin-left: 4%;
-    }
-
-    .instrument-container__crash--one {
-        background-image: url(../../../public/assets/drum/crash-1.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 30%;
-        width: 18%;
-        margin-top: 9%;
-        margin-left: 11%;
-    }
-
-    .instrument-container__crash--two {
-        background-image: url(../../../public/assets/drum/crash-2.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 25%;
-        width: 18%;
-        margin-top: 35%;
-        margin-left: 75%;
-    }
-
-
-    .instrument-container__pedal {
-        background-image: url(../../../public/assets/drum/pedal.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 8%;
-        width: 4%;
-        margin-top: 33%;
-        margin-left: 46.2%;
-    }
-
-    .instrument-container__stick1 {
-        background-image: url(../../../public/assets/drum/stick-1.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 22%;
-        width: 2%;
-        margin-top: 60%;
-        margin-left: 40%;
-    }
-
-    .instrument-container__stick2 {
-        background-image: url(../../../public/assets/drum/stick-2.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 22%;
-        width: 2%;
-        margin-top: 60%;
-        margin-left: 52%;
-    }
-
-    .instrument-container__pedal {
-        background-image: url(../../../public/assets/drum/pedal.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 16%;
-        width: 10%;
-        margin-top: 47.5%;
-        margin-left: 45%;
+        height: 40rem;
     }
 }
 
+@media (min-width: 500px) {
+    .instrument-container--desktop {
+        height: 50rem;
+    }
+}
+
+@media (min-width: 600px) {
+    .instrument-container--desktop {
+        height: 80rem;
+    }
+}
+
+
+
+
+
 /*instrumento desktop */
 @media (min-width: 1000px) {
+
     .instrument-container--desktop {
-        transform: none;
-        display: block;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px 0px;
         background-image: url(../../../public/assets/drum/fondo.jpg);
         max-width: 1400px;
         margin: 2.5rem auto;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 750px;
+        height: 870px;
         position: relative;
     }
 
@@ -216,179 +236,133 @@
     }
 
     .instrument-container__kick {
-        background-image: url(../../../public/assets/drum/kick.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
         height: 30%;
         width: 30%;
         margin-top: 29%;
         margin-left: 32%;
+        transform: none;
     }
 
     .instrument-container__snare {
-        background-image: url(../../../public/assets/drum/snare.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
         height: 23%;
         width: 18%;
         margin-left: 20%;
-        margin-top: 33%;
-
+        transform: none;
     }
 
     .instrument-container__floor {
-        background-image: url(../../../public/assets/drum/floor.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
         height: 25%;
         width: 19%;
+        transform: none;
         margin-top: 32%;
         margin-left: 58%;
         z-index: 3;
     }
 
     .instrument-container__toom--one {
-        background-image: url(../../../public/assets/drum/tom-1.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
         height: 18%;
         width: 15%;
         margin-top: 22%;
         margin-left: 24%;
+        transform: none;
     }
 
     .instrument-container__toom--two {
-        background-image: url(../../../public/assets/drum/tom-2.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
         height: 18%;
         width: 15%;
         margin-top: 22%;
+        transform: none;
         margin-left: 52%;
     }
 
     .instrument-container__toom--three {
-        background-image: url(../../../public/assets/drum/tom-3.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
         height: 18%;
         width: 15%;
         margin-top: 22%;
         margin-left: 65%;
         z-index: 5;
+        transform: none;
     }
 
     .instrument-container__ride {
-        background-image: url(../../../public/assets/drum/ride.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
         height: 34%;
         width: 20%;
         margin-top: 15%;
         margin-left: 75%;
         z-index: 6;
+        transform: none;
     }
 
     .instrument-container__closehh {
-        background-image: url(../../../public/assets/drum/close-hh.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
         height: 24%;
         width: 14%;
         margin-top: 25%;
         margin-left: 10%;
         z-index: 4;
+        transform: none;
 
     }
 
     .instrument-container__openhh {
-        background-image: url(../../../public/assets/drum/open-hh.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
         height: 24%;
         width: 14%;
         margin-top: 35%;
         margin-left: 4%;
+        transform: none;
     }
 
     .instrument-container__crash--one {
-        background-image: url(../../../public/assets/drum/crash-1.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
         height: 30%;
         width: 18%;
         margin-top: 9%;
         margin-left: 11%;
+        transform: none;
     }
 
     .instrument-container__crash--two {
-        background-image: url(../../../public/assets/drum/crash-2.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
         height: 25%;
         width: 18%;
         margin-top: 35%;
         margin-left: 75%;
+        transform: none;
     }
 
 
     .instrument-container__pedal {
-        background-image: url(../../../public/assets/drum/pedal.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
         height: 8%;
         width: 4%;
         margin-top: 33%;
         margin-left: 46.2%;
+        transform: none;
     }
 
     .instrument-container__stick1 {
-        background-image: url(../../../public/assets/drum/stick-1.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
         height: 22%;
         width: 2%;
         margin-top: 60%;
         margin-left: 40%;
+        transform: none;
     }
 
     .instrument-container__stick2 {
-        background-image: url(../../../public/assets/drum/stick-2.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
         height: 22%;
         width: 2%;
         margin-top: 60%;
-        margin-left: 52%;
+        margin-left: 60%;
+        transform: none;
     }
 
     .instrument-container__pedal {
-        background-image: url(../../../public/assets/drum/pedal.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
         height: 16%;
         width: 10%;
         margin-top: 47.5%;
         margin-left: 45%;
+        transform: none;
     }
 }
 
 @media (min-width: 1200px) {
+
     .instrument-container__kick {
         margin-top: 25%;
     }
@@ -435,8 +409,9 @@
 }
 
 @media (min-width: 1300px) {
+
     .instrument-container--desktop {
-        height: 800px;
+        margin: 0 auto;
     }
 
     .instrument-container__toom--two {
@@ -474,9 +449,14 @@
 }
 
 @media (min-width: 1400px) {
+    .instrument-container--desktop {
+        padding-left: 2.5rem;
+        margin: 2.5rem auto;
+    }
+
     .instrument-container__kick {
-        height: 38%;
         margin-top: 15%;
+        margin-left: 30%;
     }
 
     .instrument-container__toom--two {
@@ -487,32 +467,33 @@
 
     .instrument-container__toom--three {
         height: 28%;
-        margin-top: 12%;
-        margin-left: 60%;
+        margin-top: 17%;
+        margin-left: 57%;
     }
 
     .instrument-container__floor {
-        margin-top: 24%;
+        margin-top: 28%;
         height: 35%;
-        margin-left: 62%;
+        margin-left: 58%;
         z-index: 6;
     }
 
     .instrument-container__ride {
         height: 36%;
         margin-top: 2%;
-        margin-left: 70%;
+        margin-left: 62%;
     }
 
-    .instrument-container__crash--two {
+    .instrument-container__crash--one {
         margin-top: 8%;
         transform: rotate(-40deg);
-        margin-left: 11%;
+        margin-left: 6%;
     }
 
     .instrument-container__crash--two {
         margin-top: 21%;
-        margin-left: 76%;
+        margin-left: 70%;
+        height: 30%;
         z-index: 7;
     }
 
@@ -520,29 +501,31 @@
     .instrument-container__toom--one {
         height: 24%;
         margin-top: 15%;
-        margin-left: 25%;
+        margin-left: 20%;
+
     }
 
     .instrument-container__snare {
         height: 30%;
-        margin-left: 23%;
-        margin-top: 30%;
+        margin-left: 15%;
+        margin-top: 25%;
     }
 
     .instrument-container__openhh {
-        margin-left: 12%;
+        margin-left: 8%;
         margin-top: 35%;
-        height: 21%;
+        height: 23%;
     }
 
     .instrument-container__closehh {
         margin-top: 25%;
-        margin-left: 15%;
-        height: 21%;
+        margin-left: 5%;
+        height: 23%;
     }
 
     .instrument-container__pedal {
         margin-top: 32%;
+        margin-left: 43%;
     }
 
     .instrument-container__stick1,
@@ -551,10 +534,10 @@
     }
 
     .instrument-container__stick1 {
-        margin-left: 45%;
+        margin-left: 40%;
     }
 
     .instrument-container__stick2 {
-        margin-left: 60%;
+        margin-left: 55%;
     }
 }
