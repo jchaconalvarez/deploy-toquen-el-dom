@@ -3,7 +3,7 @@
 
 
 .instrument-content {
-    padding: 1rem;
+    padding: 2rem;
     margin: 0 auto;
 }
 
@@ -11,7 +11,6 @@
     color: var(--primary-dark);
     font-size: 1rem;
     margin-bottom: 0.5rem;
-    margin-top: 2rem;
 }
 
 .instrument-content__title {
@@ -53,7 +52,8 @@
 }
 
 .instrument-content__keyword img {
-    max-width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 .instrument-content__description {
@@ -68,8 +68,10 @@
     .instrument-content {
         max-width: 800px;
         margin: 0 auto;
+        padding: 0;
 
     }
+
 }
 
 @media (min-width: 900px) {
@@ -87,7 +89,7 @@
     .instrument-content {
         max-width: 1440px;
         margin: 0 auto;
-        padding: 1rem 4rem;
+        padding: 3rem 4rem;
 
     }
 
