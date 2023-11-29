@@ -2,7 +2,7 @@
 @import url(/src/css/components/header.css);
 @import url(/src/css/pages/home.css);
 @import url(/src/css/instrument/index.css);
-@import url(./components/footer.css);
+@import url(/src/css/components/footer.css);
 
 :root {
   --primary-color: #8a3db5;
