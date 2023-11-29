@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toquen el DOM</title>
+  <link rel="stylesheet" href="/src/css/base.css" />
+  <link rel="icon" type="image/png" href="/public/assets/img/favicon.png" />
+</head>
+
+<body>
+  <header class="header">
+    <a href="./index.html"><img class="header__logo" src="/public/assets/img/logo.svg" alt="Logo Toquen el DOM" /></a>
+    <nav class="header__navbar">
+      <div class="header__navbar--container">
+        <a class="header__navbar--container-instruments" href="./pages/instrumento.html">Instruments</a>
+      </div>
+      <div class="header__navbar--container">
+        <a class="header__navbar--container-about" href="#">About us</a>
+      </div>
+      <div class="header__navbar--container">
+        <a class="header__navbar--container-contact" href="#">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container-contact-background">
+        <section class="container-contact">
+            <h1 class="container-contact__main-title">Contáctanos</h1>
+            <div class="container-contact__hero-form-block">
+                <form action="">
+                    <div class="container-contact__hero-form-block--main-form-content">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre.." required />
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Escribe tu mail.." required />
+                        <label for="email">Teléfono</label>
+                        <input type="phone" name="phone" id="phone" placeholder="Escribe tu teléfono.."/>
+                    </div>
+                    <div class="container-contact__hero-form-block--form-textarea">
+                        <label for="consulta" class="form-textarea-label">Consulta</label>
+                        <textarea name="consulta" placeholder="Escribe tu consulta.." required></textarea>
+                    </div>
+                    <input class="container-contact__hero-form-block__primary-button" type="submit" name="send" value="Enviar" />
+                </form>  
+            </div>
+        </section>
+        <figure class="container-contact__hero-figure">
+          <img src="/public/assets/img/img-contact-with-ornament.png"
+            alt="una chica cantando, un chico tocando la guitarra y otro la pandereta" />
+        </figure>
+      
+    </div>
+    <section class="container-contact-details">
+        <p><img src="/public/assets/icons/email.svg" alt="icono e-mail">example@example.com</p>
+        <p><img src="/public/assets/icons/phone.svg" alt="icono teléfono">+98 7654321</p>
+        <p><img src="/public/assets/icons/location.svg" alt="icono localización">Calle 00, 1-1,  22222, Comarca</p>
+    </section>
+    
+  </main>
+  <footer class="footer">
+    <section class="container-footer">
+      <div class="icons-footer">
+        <a href="#">
+          <img src="./public/assets/icons/mdi_instagram.png" alt="icons instagram" />
+        </a>
+        <a href="#">
+          <img src="./public/assets/icons/mdi_twitter.png" alt="icons twitter" />
+        </a>
+        <a href="#">
+          <img src="./public/assets/icons/ri_facebook-fill.png" alt="icons facebook" />
+        </a>
+        <a href="#">
+          <img src="./public/assets/icons/ri_linkedin-fill.png" alt="icons linkedin" />
+        </a>
+        <a href="#">
+          <img src="./public/assets/icons/ri_youtube-fill.png" alt="icons youtube" />
+        </a>
+      </div>
+      <div class="links-footer">
+        <a href="#">Instruments</a>
+        <a href="#">About us</a>
+        <a href="#">Contact</a>
+      </div>
+    </section>
+  </footer>
+</body>
+
+</html>
