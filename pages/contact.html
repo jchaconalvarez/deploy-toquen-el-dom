@@ -29,21 +29,22 @@
         <section class="container-contact">
             <h1 class="container-contact__main-title">Contáctanos</h1>
             <div class="container-contact__hero-form-block">
-                <form action="">
+                <form action="" id="contactForm">
                     <div class="container-contact__hero-form-block--main-form-content">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre.." required />
+                        <label for="name">Nombre</label>
+                        <input type="text" name="nombre" id="name" placeholder="Escribe tu nombre.."/>
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Escribe tu mail.." required />
+                        <input type="email" name="email" id="email" placeholder="Escribe tu mail.."/>
                         <label for="email">Teléfono</label>
                         <input type="phone" name="phone" id="phone" placeholder="Escribe tu teléfono.."/>
                     </div>
                     <div class="container-contact__hero-form-block--form-textarea">
-                        <label for="consulta" class="form-textarea-label">Consulta</label>
-                        <textarea name="consulta" placeholder="Escribe tu consulta.." required></textarea>
+                        <label for="consultation" class="form-textarea-label">Consulta</label>
+                        <textarea name="consultation" placeholder="Escribe tu consulta.."></textarea>
                     </div>
                     <input class="container-contact__hero-form-block__primary-button" type="submit" name="send" value="Enviar" />
-                </form>  
+                  </form>
+                  <p id="message"></p>  
             </div>
         </section>
         <figure class="container-contact__hero-figure">
@@ -63,19 +64,19 @@
     <section class="container-footer">
       <div class="icons-footer">
         <a href="#">
-          <img src="./public/assets/icons/mdi_instagram.png" alt="icons instagram" />
+          <img src="../public/assets/icons/mdi_instagram.png" alt="icons instagram" />
         </a>
         <a href="#">
-          <img src="./public/assets/icons/mdi_twitter.png" alt="icons twitter" />
+          <img src="../public/assets/icons/mdi_twitter.png" alt="icons twitter" />
         </a>
         <a href="#">
-          <img src="./public/assets/icons/ri_facebook-fill.png" alt="icons facebook" />
+          <img src="../public/assets/icons/ri_facebook-fill.png" alt="icons facebook" />
         </a>
         <a href="#">
-          <img src="./public/assets/icons/ri_linkedin-fill.png" alt="icons linkedin" />
+          <img src="../public/assets/icons/ri_linkedin-fill.png" alt="icons linkedin" />
         </a>
         <a href="#">
-          <img src="./public/assets/icons/ri_youtube-fill.png" alt="icons youtube" />
+          <img src="../public/assets/icons/ri_youtube-fill.png" alt="icons youtube" />
         </a>
       </div>
       <div class="links-footer">
@@ -85,6 +86,7 @@
       </div>
     </section>
   </footer>
+  <script src="/src/js/form.js"></script>
 </body>
 
 </html>
