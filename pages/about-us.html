@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toquen el DOM</title>
+  <link rel="stylesheet" href="./src/css/base.css" />
+  <link rel="icon" type="image/png" href="/public/assets/img/favicon.png" />
+</head>
+
+<body>
+  <header class="header">
+    <a href="./index.html"><img class="header__logo" src="/public/assets/img/logo.svg" alt="Logo Toquen el DOM" /></a>
+    <nav class="header__navbar">
+      <div class="header__navbar--container">
+        <a class="header__navbar--container-instruments" href="./pages/instrument.html">Instruments</a>
+      </div>
+      <div class="header__navbar--container">
+        <a class="header__navbar--container-about" href="#">About us</a>
+      </div>
+      <div class="header__navbar--container">
+        <a class="header__navbar--container-contact" href="#">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container-background">
+      <section class="container-about-us">
+        <div class="container-about-us__hero-text-block">
+          <h2>Escuela musical digital</h2>
+          <h1>Sobre nosotras</h1>
+          <p class="container-about-us__hero-p">
+            Desde el 2015 que nuestra escuela de música digital ofrece una experiencia educativa única. 
+            Nuestro enfoque combina la tradición musical con la innovación tecnológica, con recurso de plataformas interactivas, producciones colaborativas en línea y recursos multimedia para guiar los estudiantes en la exploración del vasto mundo de la música digital. 
+          </p>
+          <a class="container-about-us__hero-text-block__primary-button" href="#">Descubre más</a>
+        </div>
+        <figure class="container-about-us__hero-figure">
+          <img src="./public/assets/img/img-about-us-with-ornament.png"
+            alt="una chica cantando y dos chicos tocando la guitarra" />
+        </figure>
+      </section>
+    </div>
+    <section class="container-about-us__teachers">
+      <h2>Nuestras profesoras</h2>
+      <p>Ofrecemos especialidades musicales que van desde la percusión electrónica y la versatilidad electrónica del piano hasta la expresión digital de la guitarra y la innovación sonora de la flauta. 
+      Conoce un poco mejor al equipo que hace posible el Fem Musica.</p>
+    </section>
+    <section class="container-about-us__gallery">
+      <!-- Start gallery first row -->
+      <div class="container-about-us__gallery__row">
+        <!-- Start Teacher 1 card: Deb -->
+        <div class="container-about-us__gallery__row__card pastel-green">
+          <a href="#">
+            <figure class="container-about-us__gallery__row__card__figure">
+              <img src="../public/assets/img/avatar-deb.png" alt="avatar de Deb" />
+            </figure>
+          </a>
+          <div class="container-about-us__gallery__row__card__description">
+            <h2>Deb</h2>
+            <p>Especialidades: guitarra, piano
+              Grupo preferido: Coldplay</p>
+          </div>
+        </div>
+        <!-- End Teacher 1 card: Deb -->
+        <!-- Start Teacher 2 card: Gabriela -->
+        <div class="container-about-us__gallery__row__card pastel-yellow">
+          <figure class="container-about-us__gallery__row__card__figure">
+            <a href="#"><img src="../public/assets/img/avatar-gabi.png" alt="avatar de Gabriela" /></a>
+          </figure>
+          <div class="container-about-us__gallery__row__card__description">
+            <h2>Gabriela</h2>
+            <p>Especialidades: batería, guitarra eléctrica
+              Grupo preferido: Nirvana</p>
+          </div>
+        </div>
+        <!-- End Teacher 2 card: Gabriela -->
+      </div>
+      <!-- End gallery first row -->
+      <!-- Start gallery second row -->
+      <div class="container-about-us__gallery__row">
+        <!-- Start Teacher 3 card: Rosalía -->
+        <div class="container-about-us__gallery__row__card pastel-red">
+          <a href="#">
+            <figure class="container-about-us__gallery__row__card__figure">
+              <img src="../public/assets/img/avatar-rosalia.png" alt="avatar de Rosalía" />
+            </figure>
+          </a>
+          <div class="container-about-us__gallery__row__card__description">
+            <h2>Rosalía</h2>
+            <p>Especialidades: piano, batería
+              Grupo preferido: The Ramones</p>
+          </div>
+        </div>
+        <!-- End Teacher 3 card: Rosalía -->
+        <!-- Start Teacher 4 card: Fefy -->
+        <div class="container-about-us__gallery__row__card pastel-green">
+          <a href="#">
+            <figure class="container-about-us__gallery__row__card__figure">
+              <img src="../public/assets/img/avatar-fefy.png" alt="avatar de Fefy" />
+            </figure>
+          </a>
+          <div class="container-about-us__gallery__row__card__description">
+            <h2>Fefy</h2>
+            <p>Especialidades: accordéon, piano.
+              Grupo preferido: The Pixies</p>
+          </div>
+        </div>
+        <!-- End Teacher 4 card: Fefy -->
+      </div>
+      <!-- End gallery second row -->
+      <!-- Start gallery third row -->
+      <div class="container-about-us__gallery__row">
+        <!-- Start Teacher 5 card: Vicki -->
+        <div class="container-about-us__gallery__row__card pastel-violet">
+          <a href="#">
+            <figure class="container-about-us__gallery__row__card__figure">
+              <img src="../public/assets/img/avatar-vicki.png" alt="avatar de Vicki" />
+            </figure>
+          </a>
+          <div class="container-about-us__gallery__row__card__description">
+            <h2>Vicki</h2>
+            <p>Especialidades: piano, batería
+              Grupo preferido: Smashing Pumpkins</p>
+          </div>
+        </div>
+        <!-- End Teacher 5 card: Vicki -->
+        <!-- Start teacher 6 card -->
+        <div class="container-about-us__gallery__row__card red">
+          <a href="#">
+            <figure class="container-about-us__gallery__row__card__figure">
+              <img src="" alt="" />
+            </figure>
+          </a>
+          <div class="container-about-us__gallery__row__card__description">
+            <h2></h2>
+            <p></p>
+          </div>
+        </div>
+        <!-- End guitar card -->
+      </div>
+      <!-- End gallery third row -->
+    </section>
+  </main>
+  <footer class="footer">
+    <section class="container-footer">
+      <div class="icons-footer">
+        <a href="#">
+          <img src="./public/assets/icons/mdi_instagram.png" alt="icons instagram" />
+        </a>
+        <a href="#">
+          <img src="./public/assets/icons/mdi_twitter.png" alt="icons twitter" />
+        </a>
+        <a href="#">
+          <img src="./public/assets/icons/ri_facebook-fill.png" alt="icons facebook" />
+        </a>
+        <a href="#">
+          <img src="./public/assets/icons/ri_linkedin-fill.png" alt="icons linkedin" />
+        </a>
+        <a href="#">
+          <img src="./public/assets/icons/ri_youtube-fill.png" alt="icons youtube" />
+        </a>
+      </div>
+      <div class="links-footer">
+        <a href="#">Instruments</a>
+        <a href="#">About us</a>
+        <a href="#">Contact</a>
+      </div>
+    </section>
+  </footer>
+</body>
+
+</html>
