@@ -1,0 +1,79 @@
+.in-construction__content{
+    width:100%;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1.5rem 0 2.5rem 0 ;
+} 
+
+.in-construction__content--text {
+   margin-left: 1.5rem;
+    width: 100%;
+}
+.in-construction__content--text--title{
+    color: var(--secondary-dark);
+    font-weight: 700;
+    line-height: 1.5;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.in-construction__content--primary-button {
+    font-size:1rem;
+    font-weight: 400;
+    text-align: center;
+    background-color: var(--primary-color);
+    border-radius: 48px;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.70rem 3rem;
+    text-decoration: none;
+}
+
+.in-construction__content--img {
+    width: 100%;
+    margin-bottom: 1.8rem ;
+}
+
+.in-construction__content--img img {
+    max-width: 100%;
+}
+
+@media (min-width: 1000px){
+  
+.in-construction__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    background-image: url(/public/assets/img/medium-guitar.png);
+    height:fit-content;
+} 
+
+.in-construction__content--text {
+    display:flex;
+    flex-direction: column;
+    padding: 0.70rem ;
+    align-items: left;
+    height: 12.5rem;
+
+}
+
+.in-construction__content--text--title{
+    font-size: 3rem;
+}
+.in-construction__content--primary-button {
+    display:block;
+    text-align: center;
+    background-color: var(--primary-color);
+    border-radius: 48px;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.70rem 3rem;
+    text-decoration: none;
+}
+
+.in-construction__content--img {
+    display: none;
+    }
+}
