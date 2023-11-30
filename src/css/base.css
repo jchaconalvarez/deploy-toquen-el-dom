@@ -4,6 +4,7 @@
 @import url(/src/css/instrument/index.css);
 @import url(./components/footer.css);
 @import url(./pages/contact.css);
+@import url(./pages/in-construction.css);
 
 :root {
   --primary-color: #8a3db5;
