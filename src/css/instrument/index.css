@@ -1,5 +1,5 @@
-@import url("./instrumento.css");
-@import url("./acordeon.css");
+@import url("./accordion.css");
+@import url("./instrument.css");
 
 
 .instrument-content {
@@ -30,14 +30,6 @@
     list-style: none;
 }
 
-.instrument-container--mobile {
-    max-width: 100%;
-}
-
-.instrument-container--mobile img {
-    max-width: 100%;
-}
-
 .instrument-content p {
     margin-bottom: 1.5rem;
 }
@@ -50,14 +42,14 @@
 }
 
 .instrument-content__keyword {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .instrument-content__keyword h6 {
     color: var(--primary-dark);
     font-weight: 700;
     font-size: 1.2rem;
-    margin: 4.2rem 0 3.5rem;
+    margin: 4.2rem 0 3rem;
 }
 
 .instrument-content__keyword img {
@@ -68,6 +60,10 @@
     margin-bottom: 2rem;
 }
 
+.keyword-desktop {
+    display: none;
+}
+
 @media (min-width: 800px) {
     .instrument-content {
         max-width: 800px;
@@ -76,14 +72,28 @@
     }
 }
 
+@media (min-width: 900px) {
+    .instrument-container__subtitle-two {
+        margin-top: 3.5rem;
+    }
+}
 
 @media (min-width: 1000px) {
+    .rotation-wrapper {
+        height: unset;
+        padding: unset;
+    }
+
     .instrument-content {
         max-width: 1440px;
         margin: 0 auto;
+        padding: 1rem 4rem;
 
     }
 
+    .keyword-movil {
+        display: none;
+    }
 
     .instrument-content__subtitle {
         font-size: 1.5rem;
@@ -108,13 +118,18 @@
         margin-bottom: 4rem;
     }
 
-    .instrument-content__keyword figure {
+    .instrument-content__keyword .keyword-desktop {
         display: flex;
         justify-content: center;
     }
 
-    .instrument-content__keyword figure img {
+    .keyword-desktop img {
         width: 90%;
+    }
+
+    .instrument-container__list {
+        display: flex;
+        gap: 30rem;
     }
 
 }
