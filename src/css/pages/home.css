@@ -82,7 +82,7 @@ a.container-home__hero-text-block__primary-button:hover {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .container-home__gallery__row__card {
@@ -90,7 +90,7 @@ a.container-home__hero-text-block__primary-button:hover {
   border-radius: 2rem;
   display: flex;
   gap: 1rem;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 .container-home__gallery__row__card h2,
@@ -193,6 +193,7 @@ a.container-home__hero-text-block__primary-button:hover {
   .container-home__gallery__row__card {
     flex-direction: row;
     gap: 1.5rem;
+    max-width: 49%;
   }
 
   figure.container-home__gallery__row__card__figure img {
