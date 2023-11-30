@@ -1,0 +1,258 @@
+@import url(./base.css);
+
+/*Probablemente lo de "figure, h1, h2, p" estaría bien ponerlo dentro de "base":*/
+
+figure,
+img {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+h2 {
+  color: var(--primary-dark);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  color: var(--secondary-dark);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.container-about-us-background {
+  background-color: #fff5f5;
+  padding-bottom: 2rem;
+}
+
+section.container-about-us {
+  align-items: center;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 3rem;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 0rem 1.5rem;
+}
+
+a.container-about-us__hero-text-block__primary-button {
+  background-color: var(--primary-color);
+  border-radius: 3rem;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  padding: 0.75rem 3rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+}
+
+a.container-about-us__hero-text-block__primary-button:hover {
+  background-color: var(--primary-dark);
+  transition: all 300ms ease-in-out;
+}
+
+.container-about-us__hero-p {
+  color: var(--text-color);
+  margin: 1rem 0 2rem;
+}
+
+.container-about-us__teachers {
+  margin: 0 auto;
+  padding: 3rem 2rem 0rem 2rem;
+  text-align: center;
+}
+
+/* Start gallery section */
+.container-about-us__gallery {
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2rem 1.5rem;
+}
+
+.container-about-us__gallery__row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.container-about-us__gallery__row__card {
+  align-items: center;
+  border-radius: 2rem;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.container-about-us__gallery__row__card h2,
+.container-about-us__gallery__row__card p {
+  color: var(--primary-dark);
+}
+
+.container-about-us__gallery__row__card p {
+  margin: 1rem auto 1rem;
+}
+
+.container-about-us__gallery__row__card__figure img {
+  border-radius: 1.5rem 1.5rem;
+  cursor: pointer;
+  max-width: 400px;
+}
+
+.container-about-us__gallery__row__card__secondary-button {
+  background-color: var(--primary-color);
+  border-radius: 3rem;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  padding: 0.75rem 3rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+}
+
+.container-about-us__hero-figure img {
+  width: 100%;
+}
+.container-about-us__gallery__row__card {
+  flex-direction: column;
+}
+
+/* Desktop version */
+@media (min-width: 1000px) {
+  figure,
+  img {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  h2 {
+    color: var(--primary-dark);
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  h1 {
+    color: var(--secondary-dark);
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.5;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .container-about-us-background {
+    padding-bottom: 0rem;
+  }
+
+  .container-about-us__hero-text-block {
+    max-width: 568px;
+  }
+
+  section.container-about-us {
+    flex-direction: row;
+    gap: 4rem;
+    max-width: 1440px;
+    padding: 1rem 4rem 0rem 4rem;
+  }
+
+  a.container-about-us__hero-text-block__primary-button {
+    display: inline-block;
+  }
+
+  .container-about-us__teachers {
+    max-width: 1440px;
+    padding: 6rem 16rem 4rem;
+  }
+
+  /* Start gallery section */
+  .container-about-us__gallery {
+    max-width: 1440px;
+    padding: 3rem 4rem;
+  }
+
+  .container-about-us__gallery__row {
+    flex-direction: row;
+  }
+
+  .container-about-us__gallery__row__card {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  figure.container-about-us__gallery__row__card__figure img {
+    border-radius: 1.5rem 0 0 1.5rem;
+    transition: all 300ms ease-in-out;
+    width: 285px;
+  }
+
+  figure.container-about-us__gallery__row__card__figure img:hover {
+    filter: contrast(115%);
+    transition: all 300ms ease-in-out;
+  }
+
+  .container-about-us__gallery__row__card__description {
+    padding: 0 1rem;
+  }
+
+  .container-about-us__gallery__row__card h2,
+  .container-about-us__gallery__row__card p {
+    color: var(--primary-dark);
+  }
+
+  .container-about-us__gallery__row__card h2 {
+    margin-bottom: 0;
+  }
+
+  .container-about-us__gallery__row__card p {
+    margin: 1.5rem 0;
+    padding-right: 1rem;
+  }
+
+  .container-about-us__gallery__row__card__secondary-button {
+    background-color: #fff;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    display: inline-block;
+    transition: all 300ms ease-in-out;
+  }
+
+  .container-about-us__gallery__row__card__secondary-button:hover {
+    border: 1px solid var(--primary-dark);
+    color: var(--primary-dark);
+    transition: all 300ms ease-in-out;
+  }
+
+  /* Card backgrounds */
+
+  .green {
+    background-color: var(--secondary-dark);
+  }
+
+  .brown {
+    background-color: var(--tertiary-dark);
+  }
+
+  .violet {
+    background-color: var(--primary-dark);
+  }
+
+  .red {
+    background-color: #d04d3e;
+  }
+}
