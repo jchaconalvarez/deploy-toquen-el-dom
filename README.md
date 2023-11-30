@@ -62,7 +62,7 @@ npm test
 
 ### 🎵 Imagenes de la web
 
-![Vista previa del proyecto](./public/img/test-dom.png)
+![Vista previa del proyecto](./public/assets/img/Toquen-el-dom-page.png)
 
 
 ### 🎉 Contribuye con Fem Musica
@@ -79,13 +79,26 @@ git clone https://github.com/tuusuario/fem-musica.git
 3. Crea una rama para tus contribuciones.
 4. Realiza tus cambios y asegúrate de que las pruebas sean un concierto sin desafines.
 
-
 ## 🌟 Desarrolladoras Estelares
 
-Debora Menezes 🎸
-Vicky Roberson 🎤
-Rosalia Bravo 🎹
-Stefania Desogus 🥁
-Gabriela Poves 🎻
+🎸 Débora Menezes: 
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/d%C3%A9bora-sofia-menezes/) 
+
+🎤 Vicky Roberson : 
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriela-poves-navarro/)
+
+🎹 Rosalia Bravo: 
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rosalia-bravo-valencia-a6618b34/)
+
+🥁 Stefania Desogus: 
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/stefaniadesogus/)
+
+🎻 Gabriela Poves: 
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://es.linkedin.com/in/danicp)
 
 ¡Gracias por unirte a Fem Musica, donde la magia del código encuentra su ritmo y el DOM se convierte en una bateria virtual! 🎶

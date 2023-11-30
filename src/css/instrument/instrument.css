@@ -197,6 +197,53 @@
     margin-left: 15%;
 }
 
+/*animaciones*/
+.animation-style {
+    transform: scale(0.94);
+    filter: brightness(180%);
+}
+
+.crash-two-hover {
+    animation: splash-anime 1.5s;
+    -webkit-animation: splash-anime 1.5s;
+}
+
+@keyframes splash-anime {
+    from {
+        transform: scaleY(1.1) rotate(1deg);
+        filter: blur(0.05em);
+    }
+
+    16% {
+        transform: scaleY(0.92);
+    }
+
+    32% {
+        transform: scaleY(1.06) rotate(-3deg);
+        filter: brightness(150%);
+    }
+
+    48% {
+        transform: scaleY(0.94);
+        filter: brightness(100%);
+    }
+
+    64% {
+        transform: scaleY(1.04) rotate(0);
+        filter: blur(0);
+        filter: brightness(150%);
+    }
+
+    80% {
+        transform: scaleY(0.96);
+        filter: brightness(100%);
+    }
+
+    94% {
+        transform: scaleY(1.02) rotate(-1deg);
+    }
+}
+
 @media (min-width: 400px) {
     .instrument-container--desktop {
         height: 40rem;
