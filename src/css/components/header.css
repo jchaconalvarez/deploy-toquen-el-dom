@@ -56,32 +56,40 @@
     }
     
     .header__navbar{
-        min-width: 30rem;
+        width: 28rem;
         border-left: 1px solid var(--text-light);
+        display: flex;
+        flex-direction: row;
+        display: flex;
     }
 
     
     .header__navbar--container{
         border-right: 1px inset var(--text-light);
-        height: 4rem;
-        width: 100%;
-        padding: 0.5rem 0 0.5rem 0 0.5rem;
+        height: 4.5rem;
+        padding: 0.6rem 0 0.6rem 0;
+        width:100%
+       
     }
 
     .header__navbar--container-instruments{
         display: flex;
         align-items: start;
-        padding-right: 0.2rem;
     }
 
     .header__navbar--container-about{
         display: flex;
         align-items: end;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        
+
     }
 
     .header__navbar--container-contact{
         display: flex;
         align-items: start;
+    
     }
 
     .header__navbar--container:hover{

@@ -39,21 +39,23 @@
 }
 
 @media (min-width: 1000px){
-  
+
 .in-construction__content{
+    background-image: url(/public/assets/img/medium-guitar.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0;
     padding: 0;
-    background-image: url(/public/assets/img/medium-guitar.png);
-    height:fit-content;
+    
 } 
 
 .in-construction__content--text {
     display:flex;
     flex-direction: column;
-    padding: 0.70rem ;
+    margin: 5rem 0 0 4.75rem;
     align-items: left;
     height: 12.5rem;
 
@@ -69,8 +71,8 @@
     border-radius: 48px;
     color: #fff;
     cursor: pointer;
-    padding: 0.70rem 3rem;
     text-decoration: none;
+    width: 15rem;
 }
 
 .in-construction__content--img {
