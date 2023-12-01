@@ -25,10 +25,10 @@ const playCymbals=(element)=>{
     const audio = element.children[0]
     audio.load()
     audio.play()
-    element.classList.add("crash-two-hover")
+    element.classList.remove("crash-two-hover")
     setTimeout(() => {
-        element.classList.remove("crash-two-hover")
-    },50)
+        element.classList.add("crash-two-hover")
+    },1000)
 }
 
 
