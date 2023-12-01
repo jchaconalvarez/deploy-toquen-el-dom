@@ -25,9 +25,10 @@ const playCymbals = (element) => {
   audio.load();
   audio.play();
   element.classList.remove("crash-two-hover");
+
   setTimeout(() => {
     element.classList.add("crash-two-hover");
-  }, 1000);
+  }, 1);
 };
 
 document.addEventListener("keypress", function (event) {
@@ -55,7 +56,7 @@ document.addEventListener("keypress", function (event) {
   if (event.code == "KeyV") {
     playBassDrums(snare);
   }
-//Cymbals start
+  //Cymbals start
   if (event.code == "KeyQ" || event.code == "KeyW") {
     playCymbals(crashOne);
   }
@@ -76,15 +77,17 @@ document.addEventListener("keypress", function (event) {
     playCymbals(openHh);
   }
 });
+document.addEventListener("DOMContentLoaded", () => {
+  kick.addEventListener("mousedown", () => playBassDrums(kick));
+  snare.addEventListener("mousedown", () => playBassDrums(snare));
+  floor.addEventListener("mousedown", () => playBassDrums(floor));
+  tomOne.addEventListener("mousedown", () => playBassDrums(tomOne));
+  tomTwo.addEventListener("mousedown", () => playBassDrums(tomTwo));
+  tomThree.addEventListener("mousedown", () => playBassDrums(tomThree));
+  crashOne.addEventListener("mousedown", () => playCymbals(crashOne));
+  crashTwo.addEventListener("mousedown", () => playCymbals(crashTwo));
+  ride.addEventListener("mousedown", () => playCymbals(ride));
+  closeHh.addEventListener("mousedown", () => playCymbals(closeHh));
+  openHh.addEventListener("mousedown", () => playCymbals(openHh));
+})
 
-kick.addEventListener("mousedown", () => playBassDrums(kick));
-snare.addEventListener("mousedown", () => playBassDrums(snare));
-floor.addEventListener("mousedown", () => playBassDrums(floor));
-tomOne.addEventListener("mousedown", () => playBassDrums(tomOne));
-tomTwo.addEventListener("mousedown", () => playBassDrums(tomTwo));
-tomThree.addEventListener("mousedown", () => playBassDrums(tomThree));
-crashOne.addEventListener("mousedown", () => playBassDrums(crashOne));
-crashTwo.addEventListener("mousedown", () => playBassDrums(crashTwo));
-ride.addEventListener("mousedown", () => playBassDrums(ride));
-closeHh.addEventListener("mousedown", () => playBassDrums(closeHh));
-openHh.addEventListener("mousedown", () => playBassDrums(openHh));
