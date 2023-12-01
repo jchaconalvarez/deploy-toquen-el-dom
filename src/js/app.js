@@ -31,11 +31,49 @@ const playCymbals = (element) => {
 };
 
 document.addEventListener("keypress", function (event) {
+  //Drums start
   if (event.code == "KeyP") {
     playBassDrums(kick);
   }
+
+  if (event.code == "KeyA") {
+    playBassDrums(tomOne);
+  }
+
+  if (event.code == "KeyS") {
+    playBassDrums(tomTwo);
+  }
+
+  if (event.code == "KeyD") {
+    playBassDrums(tomThree);
+  }
+
+  if (event.code == "KeyJ") {
+    playBassDrums(floor);
+  }
+
+  if (event.code == "KeyV") {
+    playBassDrums(snare);
+  }
+//Cymbals start
   if (event.code == "KeyQ" || event.code == "KeyW") {
-    playBassDrums(crashOne);
+    playCymbals(crashOne);
+  }
+
+  if (event.code == "KeyT" || event.code == "KeyY") {
+    playCymbals(crashTwo);
+  }
+
+  if (event.code == "KeyI") {
+    playCymbals(ride);
+  }
+
+  if (event.code == "KeyX") {
+    playCymbals(closeHh);
+  }
+
+  if (event.code == "KeyZ") {
+    playCymbals(openHh);
   }
 });
 
