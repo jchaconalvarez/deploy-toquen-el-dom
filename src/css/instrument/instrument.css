@@ -199,7 +199,7 @@
 
 /*animaciones*/
 .animation-style {
-    transform: scale(0.94);
+    transform: scale(1);
     filter: brightness(180%);
 }
 
