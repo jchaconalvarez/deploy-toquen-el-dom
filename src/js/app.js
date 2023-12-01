@@ -9,7 +9,7 @@ const closeHh = document.querySelector(".instrument-container__closehh");
 const openHh = document.querySelector(".instrument-container__openhh");
 const crashOne = document.querySelector(".instrument-container__crash--one");
 const crashTwo = document.querySelector(".instrument-container__crash--two");
-
+const pedal = document.querySelector(".instrument-container__pedal");
 const playBassDrums = (element) => {
   const audio = element.children[0];
   audio.load();
@@ -79,6 +79,7 @@ document.addEventListener("keypress", function (event) {
 });
 document.addEventListener("DOMContentLoaded", () => {
   kick.addEventListener("mousedown", () => playBassDrums(kick));
+  pedal.addEventListener("mousedown", () => playBassDrums(kick));
   snare.addEventListener("mousedown", () => playBassDrums(snare));
   floor.addEventListener("mousedown", () => playBassDrums(floor));
   tomOne.addEventListener("mousedown", () => playBassDrums(tomOne));
@@ -89,5 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
   ride.addEventListener("mousedown", () => playCymbals(ride));
   closeHh.addEventListener("mousedown", () => playCymbals(closeHh));
   openHh.addEventListener("mousedown", () => playCymbals(openHh));
+
 })
 
