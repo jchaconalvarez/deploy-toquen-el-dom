@@ -170,6 +170,7 @@ a.container-about-us__hero-text-block__primary-button:hover {
   .container-about-us__gallery {
     max-width: 1440px;
     padding: 3rem 4rem;
+    flex-wrap: wrap;
   }
 
   .container-about-us__gallery__row {
