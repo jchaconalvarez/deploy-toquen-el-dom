@@ -13,13 +13,33 @@ const crashTwo = document.querySelector(".instrument-container__crash--two")
 
 const playBassDrums=(element)=>{
     const audio = element.children[0]
+    audio.load()
     audio.play()
     element.classList.add("animation-style")
     setTimeout(() => {
         element.classList.remove("animation-style")
-    },100)
+    },50)
 }
+
+const playCymbals=(element)=>{
+    const audio = element.children[0]
+    audio.load()
+    audio.play()
+    element.classList.add("crash-two-hover")
+    setTimeout(() => {
+        element.classList.remove("crash-two-hover")
+    },50)
+}
+
 
 kick.addEventListener("mousedown", () => playBassDrums(kick))
 snare.addEventListener("mousedown", () => playBassDrums(snare))
-
+floor.addEventListener("mousedown", () => playBassDrums(floor))
+tomOne.addEventListener("mousedown", () => playBassDrums(tomOne))
+tomTwo.addEventListener("mousedown", () => playBassDrums(tomTwo))
+tomThree.addEventListener("mousedown", () => playBassDrums(tomThree))
+crashOne.addEventListener("mousedown", () => playBassDrums(crashOne))
+crashTwo.addEventListener("mousedown", () => playBassDrums(crashTwo))
+ride.addEventListener("mousedown", () => playBassDrums(ride))
+closeHh.addEventListener("mousedown", () => playBassDrums(closeHh))
+openHh.addEventListener("mousedown", () => playBassDrums(openHh))
