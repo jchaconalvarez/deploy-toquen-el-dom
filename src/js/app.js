@@ -11,8 +11,18 @@ const crashOne = document.querySelector(".instrument-container__crash--one");
 const crashTwo = document.querySelector(".instrument-container__crash--two");
 const pedal = document.querySelector(".instrument-container__pedal");
 //Baquetas
-const stickLeft = document.querySelector(".drumstick--snareLeft")
-const stickRight = document.querySelector(".drumstick--snareRight")
+const stickSnareLeft = document.querySelector(".drumstick--snareLeft")
+const stickSnareRight = document.querySelector(".drumstick--snareRight")
+
+const stickTom1Right = document.querySelector(".drumstick--tom1Right")
+const stickTom1Left = document.querySelector(".drumstick--tom1Left")
+const stickTom2Right = document.querySelector(".drumstick--tom2Right")
+const stickTom2Left = document.querySelector(".drumstick--tom2Left")
+const stickTom3Right = document.querySelector(".drumstick--tom3Right")
+const stickTom3Left = document.querySelector(".drumstick--tom3Left")
+
+const stickFloorRight = document.querySelector(".drumstick--floorRight")
+const stickFloorLeft = document.querySelector(".drumstick--floorLeft")
 
 const positionTicks = (instrument, stick) => {
   // Necesito la posicion del instrumento a donde se moverá el element
@@ -31,8 +41,22 @@ const positionTicks = (instrument, stick) => {
 
 }
 
-positionTicks(snare, stickRight)
-positionTicks(snare, stickLeft)
+// SNARE
+positionTicks(snare, stickSnareLeft)
+positionTicks(snare, stickSnareRight)
+// TOM1
+positionTicks(tomOne, stickTom1Left)
+positionTicks(tomOne, stickTom1Right)
+// TOM2
+positionTicks(tomTwo, stickTom2Left)
+positionTicks(tomTwo, stickTom2Right)
+// TOM3
+positionTicks(tomThree, stickTom3Left)
+positionTicks(tomThree, stickTom3Right)
+// FLOOR
+positionTicks(floor, stickFloorLeft)
+positionTicks(floor, stickFloorRight)
+
 
 
 const playBassDrums = (element) => {

@@ -178,7 +178,11 @@
     z-index: 2;
 }
 
-.drumstick--snareRight {
+.drumstick--snareRight,
+.drumstick--tom1Right,
+.drumstick--tom2Right,
+.drumstick--tom3Right,
+.drumstick--floorRight {
     background-image: url(../../../public/assets/drum/stick-1.png);
     background-position: center;
     background-size: contain;
@@ -187,14 +191,17 @@
     width: 1%;
 }
 
-.drumstick--snareLeft {
+.drumstick--snareLeft,
+.drumstick--tom1Left,
+.drumstick--tom2Left,
+.drumstick--tom3Left,
+.drumstick--floorLeft {
     background-image: url(../../../public/assets/drum/stick-1.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     height: 20%;
     width: 1%;
-    margin-left: 20px;
 }
 
 
@@ -620,7 +627,6 @@
 
     .instrument-container__crash--one {
         margin-top: 8%;
-        transform: rotate(-40deg);
         margin-left: 6%;
     }
 
