@@ -11,18 +11,12 @@ const crashOne = document.querySelector(".instrument-container__crash--one");
 const crashTwo = document.querySelector(".instrument-container__crash--two");
 const pedal = document.querySelector(".instrument-container__pedal");
 //Baquetas
-const stickSnareLeft = document.querySelector(".drumstick--snareLeft")
-const stickSnareRight = document.querySelector(".drumstick--snareRight")
-
-const stickTom1Right = document.querySelector(".drumstick--tom1Right")
-const stickTom1Left = document.querySelector(".drumstick--tom1Left")
-const stickTom2Right = document.querySelector(".drumstick--tom2Right")
-const stickTom2Left = document.querySelector(".drumstick--tom2Left")
-const stickTom3Right = document.querySelector(".drumstick--tom3Right")
-const stickTom3Left = document.querySelector(".drumstick--tom3Left")
-
 const stickFloorRight = document.querySelector(".drumstick--floorRight")
 const stickFloorLeft = document.querySelector(".drumstick--floorLeft")
+
+//test
+const rightStick = document.querySelector(".right-drumstick")
+const leftStick = document.querySelector(".left-drumstick")
 
 const positionTicks = (instrument, stick, space = 0) => {
   // Necesito la posicion del instrumento a donde se moverá el element
@@ -41,46 +35,42 @@ const positionTicks = (instrument, stick, space = 0) => {
 
 }
 
-// SNARE
-positionTicks(snare, stickSnareLeft, 50)
-positionTicks(snare, stickSnareRight)
-// TOM1
-positionTicks(tomOne, stickTom1Left, 50)
-positionTicks(tomOne, stickTom1Right)
-// TOM2
-positionTicks(tomTwo, stickTom2Left, 50)
-positionTicks(tomTwo, stickTom2Right)
-// TOM3
-positionTicks(tomThree, stickTom3Left, 50)
-positionTicks(tomThree, stickTom3Right)
-// FLOOR
-positionTicks(floor, stickFloorLeft, 50)
-positionTicks(floor, stickFloorRight)
-
-
-
-const playBassDrums = (element, stick) => {
-  const audio = element.children[0];
+const playInstrumentSound = (instrument) => {
+  const audio = instrument.children[0];
   audio.load();
   audio.play();
-  if (stick) stick.classList.add("drumstickAnimate")
-  stick.style.opacity = 1;
-  element.classList.add("animation-style");
+}
+
+const playBassDrums = (instrument, stick, space = 0) => {
+
+  // Condicional para arreglar conflicto con la animación del kick
+  if (stick) {
+    // posiciono al stick respecto al elemento que toco.
+    positionTicks(instrument, stick, space)
+    stick.classList.add("drumstickAnimate")
+  }
+
+  // ejecuto el sonido
+  playInstrumentSound(instrument)
+
+  instrument.classList.add("animation-style");
+
   setTimeout(() => {
     if (stick) stick.classList.remove("drumstickAnimate")
-    element.classList.remove("animation-style");
+    instrument.classList.remove("animation-style");
   }, 10);
 };
 
-const playCymbals = (element) => {
-  const audio = element.children[0];
-  audio.load();
-  audio.play();
-  element.classList.remove("crash-two-hover");
+const playCymbals = (instrument, stick, space = 0) => {
 
+  playInstrumentSound(instrument)
+  positionTicks(instrument, stick, space)
+  instrument.classList.remove("crash-two-hover");
+  stick.classList.add("drumstickAnimate")
   setTimeout(() => {
-    element.classList.add("crash-two-hover");
-  }, 1);
+    instrument.classList.add("crash-two-hover");
+    stick.classList.remove("drumstickAnimate")
+  }, 10);
 };
 
 document.addEventListener("keypress", function (event) {
@@ -90,58 +80,58 @@ document.addEventListener("keypress", function (event) {
   }
 
   if (event.code == "KeyA") {
-    playBassDrums(tomOne, stickTom1Left);
+    playBassDrums(tomOne, leftStick, 50);
   }
 
   if (event.code == "KeyS") {
-    playBassDrums(tomTwo, stickTom2Left);
+    playBassDrums(tomTwo, leftStick, 50);
   }
 
   if (event.code == "KeyD") {
-    playBassDrums(tomThree, stickTom3Left);
+    playBassDrums(tomThree, leftStick, 50);
   }
 
   if (event.code == "KeyJ") {
-    playBassDrums(floor, stickFloorLeft);
+    playBassDrums(floor, leftStick, 50);
   }
 
   if (event.code == "KeyV") {
-    playBassDrums(snare, stickSnareLeft);
+    playBassDrums(snare, leftStick, 50);
   }
   //Cymbals start
   if (event.code == "KeyQ" || event.code == "KeyW") {
-    playCymbals(crashOne);
+    playCymbals(crashOne, leftStick, 50);
   }
 
   if (event.code == "KeyT" || event.code == "KeyY") {
-    playCymbals(crashTwo);
+    playCymbals(crashTwo, leftStick, 50);
   }
 
   if (event.code == "KeyI") {
-    playCymbals(ride);
+    playCymbals(ride, leftStick, 50);
   }
 
   if (event.code == "KeyX") {
-    playCymbals(closeHh);
+    playCymbals(closeHh, leftStick, 50);
   }
 
   if (event.code == "KeyZ") {
-    playCymbals(openHh);
+    playCymbals(openHh, leftStick, 50);
   }
 });
 document.addEventListener("DOMContentLoaded", () => {
   kick.addEventListener("mousedown", () => playBassDrums(kick));
   pedal.addEventListener("mousedown", () => playBassDrums(kick));
-  snare.addEventListener("mousedown", () => playBassDrums(snare, stickSnareRight));
-  floor.addEventListener("mousedown", () => playBassDrums(floor, stickFloorRight));
-  tomOne.addEventListener("mousedown", () => playBassDrums(tomOne, stickTom1Right));
-  tomTwo.addEventListener("mousedown", () => playBassDrums(tomTwo, stickTom2Right));
-  tomThree.addEventListener("mousedown", () => playBassDrums(tomThree, stickTom3Right));
-  crashOne.addEventListener("mousedown", () => playCymbals(crashOne));
-  crashTwo.addEventListener("mousedown", () => playCymbals(crashTwo));
-  ride.addEventListener("mousedown", () => playCymbals(ride));
-  closeHh.addEventListener("mousedown", () => playCymbals(closeHh));
-  openHh.addEventListener("mousedown", () => playCymbals(openHh));
+  snare.addEventListener("mousedown", () => playBassDrums(snare, rightStick));
+  floor.addEventListener("mousedown", () => playBassDrums(floor, rightStick));
+  tomOne.addEventListener("mousedown", () => playBassDrums(tomOne, rightStick));
+  tomTwo.addEventListener("mousedown", () => playBassDrums(tomTwo, rightStick));
+  tomThree.addEventListener("mousedown", () => playBassDrums(tomThree, rightStick));
+  crashOne.addEventListener("mousedown", () => playCymbals(crashOne, rightStick));
+  crashTwo.addEventListener("mousedown", () => playCymbals(crashTwo, rightStick));
+  ride.addEventListener("mousedown", () => playCymbals(ride, rightStick));
+  closeHh.addEventListener("mousedown", () => playCymbals(closeHh, rightStick));
+  openHh.addEventListener("mousedown", () => playCymbals(openHh, rightStick));
 
 })
 
