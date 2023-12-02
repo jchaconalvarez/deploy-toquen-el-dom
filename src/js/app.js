@@ -24,7 +24,7 @@ const stickTom3Left = document.querySelector(".drumstick--tom3Left")
 const stickFloorRight = document.querySelector(".drumstick--floorRight")
 const stickFloorLeft = document.querySelector(".drumstick--floorLeft")
 
-const positionTicks = (instrument, stick) => {
+const positionTicks = (instrument, stick, space = 0) => {
   // Necesito la posicion del instrumento a donde se moverá el element
   const coords = instrument.getBoundingClientRect()
   // obtengo la coordenada del centro del instrumento
@@ -36,37 +36,40 @@ const positionTicks = (instrument, stick) => {
 
   // posiciono el stick 
   stick.style.top = center + posicionTop + "px"
-  stick.style.left = center + posicionLeft + "px"
-  stick.style.zIndex = 5
+  stick.style.left = center - space + posicionLeft + "px"
+  stick.style.zIndex = 9
 
 }
 
 // SNARE
-positionTicks(snare, stickSnareLeft)
+positionTicks(snare, stickSnareLeft, 50)
 positionTicks(snare, stickSnareRight)
 // TOM1
-positionTicks(tomOne, stickTom1Left)
+positionTicks(tomOne, stickTom1Left, 50)
 positionTicks(tomOne, stickTom1Right)
 // TOM2
-positionTicks(tomTwo, stickTom2Left)
+positionTicks(tomTwo, stickTom2Left, 50)
 positionTicks(tomTwo, stickTom2Right)
 // TOM3
-positionTicks(tomThree, stickTom3Left)
+positionTicks(tomThree, stickTom3Left, 50)
 positionTicks(tomThree, stickTom3Right)
 // FLOOR
-positionTicks(floor, stickFloorLeft)
+positionTicks(floor, stickFloorLeft, 50)
 positionTicks(floor, stickFloorRight)
 
 
 
-const playBassDrums = (element) => {
+const playBassDrums = (element, stick) => {
   const audio = element.children[0];
   audio.load();
   audio.play();
+  if (stick) stick.classList.add("drumstickAnimate")
+  stick.style.opacity = 1;
   element.classList.add("animation-style");
   setTimeout(() => {
+    if (stick) stick.classList.remove("drumstickAnimate")
     element.classList.remove("animation-style");
-  }, 50);
+  }, 10);
 };
 
 const playCymbals = (element) => {
@@ -87,23 +90,23 @@ document.addEventListener("keypress", function (event) {
   }
 
   if (event.code == "KeyA") {
-    playBassDrums(tomOne);
+    playBassDrums(tomOne, stickTom1Left);
   }
 
   if (event.code == "KeyS") {
-    playBassDrums(tomTwo);
+    playBassDrums(tomTwo, stickTom2Left);
   }
 
   if (event.code == "KeyD") {
-    playBassDrums(tomThree);
+    playBassDrums(tomThree, stickTom3Left);
   }
 
   if (event.code == "KeyJ") {
-    playBassDrums(floor);
+    playBassDrums(floor, stickFloorLeft);
   }
 
   if (event.code == "KeyV") {
-    playBassDrums(snare);
+    playBassDrums(snare, stickSnareLeft);
   }
   //Cymbals start
   if (event.code == "KeyQ" || event.code == "KeyW") {
@@ -129,11 +132,11 @@ document.addEventListener("keypress", function (event) {
 document.addEventListener("DOMContentLoaded", () => {
   kick.addEventListener("mousedown", () => playBassDrums(kick));
   pedal.addEventListener("mousedown", () => playBassDrums(kick));
-  snare.addEventListener("mousedown", () => playBassDrums(snare));
-  floor.addEventListener("mousedown", () => playBassDrums(floor));
-  tomOne.addEventListener("mousedown", () => playBassDrums(tomOne));
-  tomTwo.addEventListener("mousedown", () => playBassDrums(tomTwo));
-  tomThree.addEventListener("mousedown", () => playBassDrums(tomThree));
+  snare.addEventListener("mousedown", () => playBassDrums(snare, stickSnareRight));
+  floor.addEventListener("mousedown", () => playBassDrums(floor, stickFloorRight));
+  tomOne.addEventListener("mousedown", () => playBassDrums(tomOne, stickTom1Right));
+  tomTwo.addEventListener("mousedown", () => playBassDrums(tomTwo, stickTom2Right));
+  tomThree.addEventListener("mousedown", () => playBassDrums(tomThree, stickTom3Right));
   crashOne.addEventListener("mousedown", () => playCymbals(crashOne));
   crashTwo.addEventListener("mousedown", () => playCymbals(crashTwo));
   ride.addEventListener("mousedown", () => playCymbals(ride));
