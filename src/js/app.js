@@ -10,6 +10,31 @@ const openHh = document.querySelector(".instrument-container__openhh");
 const crashOne = document.querySelector(".instrument-container__crash--one");
 const crashTwo = document.querySelector(".instrument-container__crash--two");
 const pedal = document.querySelector(".instrument-container__pedal");
+//Baquetas
+const stickLeft = document.querySelector(".drumstick--snareLeft")
+const stickRight = document.querySelector(".drumstick--snareRight")
+
+const positionTicks = (instrument, stick) => {
+  // Necesito la posicion del instrumento a donde se moverá el element
+  const coords = instrument.getBoundingClientRect()
+  // obtengo la coordenada del centro del instrumento
+  const center = coords.width / 2
+
+  // obtengo la distancia respecto al  contenedor padre
+  const posicionTop = instrument.offsetTop;
+  const posicionLeft = instrument.offsetLeft;
+
+  // posiciono el stick 
+  stick.style.top = center + posicionTop + "px"
+  stick.style.left = center + posicionLeft + "px"
+  stick.style.zIndex = 5
+
+}
+
+positionTicks(snare, stickRight)
+positionTicks(snare, stickLeft)
+
+
 const playBassDrums = (element) => {
   const audio = element.children[0];
   audio.load();
