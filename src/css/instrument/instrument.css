@@ -30,6 +30,7 @@
     width: 45%;
     margin-top: 65%;
     margin-left: 20%;
+    z-index: 1;
 }
 
 .instrument-container__snare {
@@ -42,6 +43,7 @@
     transform: rotate(90deg);
     margin-left: 20%;
     margin-top: 35%;
+    z-index: 5;
 }
 
 .instrument-container__floor {
@@ -67,6 +69,7 @@
     transform: rotate(90deg);
     margin-top: 40%;
     margin-left: 40%;
+    z-index: 6;
 }
 
 .instrument-container__toom--two {
@@ -131,6 +134,7 @@
     transform: rotate(90deg);
     margin-top: 18%;
     margin-left: 10%;
+    z-index: 4;
 }
 
 .instrument-container__crash--one {
@@ -143,7 +147,7 @@
     transform: rotate(90deg);
     margin-top: 15%;
     margin-left: 50%;
-    z-index: 5;
+    z-index: 7;
 }
 
 
@@ -171,7 +175,28 @@
     margin-top: 74%;
     margin-left: 18%;
     transform: rotate(90deg);
+    z-index: 2;
 }
+
+.drumstick--snareRight {
+    background-image: url(../../../public/assets/drum/stick-1.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 20%;
+    width: 1%;
+}
+
+.drumstick--snareLeft {
+    background-image: url(../../../public/assets/drum/stick-1.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 20%;
+    width: 1%;
+    margin-left: 20px;
+}
+
 
 .instrument-container__stick1 {
     background-image: url(../../../public/assets/drum/stick-1.png);
@@ -273,6 +298,26 @@
         transform: scale(0.94) !important;
         filter: brightness(180%);
     }
+
+    @keyframes drumstick-animation {
+
+        0% {
+            transform: rotate(-20deg) translateY(0);
+        }
+
+        50% {
+            transform: rotate(20deg) translateY(-50px);
+        }
+
+        100% {
+            transform: rotate(-20deg) translateY(0);
+        }
+    }
+
+    .drumstickAnimate {
+        animation: drumstick-animation 0.3s;
+    }
+
 
     @keyframes splash-anime {
         from {
@@ -386,7 +431,7 @@
         width: 14%;
         margin-top: 25%;
         margin-left: 10%;
-        z-index: 4;
+        z-index: 5;
         transform: none;
 
     }
@@ -474,6 +519,7 @@
         width: 15%;
         margin-top: 18%;
         margin-left: 52%;
+        z-index: 5;
     }
 
     .instrument-container__toom--three {
