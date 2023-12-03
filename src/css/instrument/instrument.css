@@ -21,7 +21,7 @@
 }
 
 .instrument-container__kick {
-    background-image: url(../../../public/assets/drum/kick.png);
+    background-image: url(../../../public/assets/drum/kick-2.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -51,10 +51,10 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    height: 18%;
-    width: 28%;
+    height: 15%;
+    width: 25%;
     transform: rotate(90deg);
-    margin-left: 18%;
+    margin-left: 16%;
     margin-top: 110%;
     z-index: 3;
 }
@@ -64,7 +64,7 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    height: 16%;
+    height: 13%;
     width: 22%;
     transform: rotate(90deg);
     margin-top: 40%;
@@ -77,11 +77,12 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    height: 16%;
+    height: 14%;
     width: 22%;
     transform: rotate(90deg);
     margin-top: 92%;
     margin-left: 30%;
+    z-index: 4;
 }
 
 .instrument-container__toom--three {
@@ -89,11 +90,12 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    height: 16%;
+    height: 13%;
     width: 22%;
     transform: rotate(90deg);
     margin-top: 92%;
     margin-left: 50%;
+    z-index: 4;
 }
 
 /* para obtener otras animaciones del platillo*/
@@ -129,12 +131,12 @@
 
 /* para obtener otras animaciones del platillo*/
 .instrument-container__closehh {
-    height: 16%;
+    height: 14%;
     width: 25%;
     transform: rotate(90deg);
     margin-top: 16%;
     margin-left: 28%;
-    z-index: 4;
+    z-index: 7;
 }
 
 
@@ -162,12 +164,12 @@
 
 
 .instrument-container__openhh {
-    height: 16%;
+    height: 14%;
     width: 25%;
     transform: rotate(90deg);
     margin-top: 18%;
     margin-left: 10%;
-    z-index: 4;
+    z-index: 6;
 }
 
 .cymbal-openhh-front {
@@ -193,7 +195,7 @@
 /* para obtener otras animaciones del platillo*/
 
 .instrument-container__crash--one {
-    height: 25%;
+    height: 18%;
     width: 30%;
     transform: rotate(90deg);
     margin-top: 15%;
@@ -267,27 +269,86 @@
     z-index: 2;
 }
 
-.right-drumstick {
-    background-image: url(../../../public/assets/drum/stick-1.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 20%;
-    width: 1%;
-    top: 50%;
-    left: 50%
+.head-pedal {
+    background: url(../../../public/assets/drum/pedal-cabeza.png) no-repeat;
+    background-size: 35%;
+    background-position: 90% 10%;
+    width: 70%;
+    z-index: 1;
+    height: 70%;
 }
 
-.left-drumstick {
-    background-image: url(../../../public/assets/drum/stick-1.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 20%;
-    width: 1%;
-    top: 60%;
-    left: 40%
+.pedal-face {
+    background: url(../../../public/assets/drum/pedal-frontal.png) no-repeat;
+    background-size: 50%;
+    background-position: 62% 45%;
+    width: 100%;
+    height: 100%;
+
 }
+
+.hitCrashBack {
+    animation: 2s .1ms swingCrashBack
+}
+
+@keyframes swingCrash {
+
+    0%,
+    18%,
+    40% {
+        opacity: 0
+    }
+
+    100%,
+    29%,
+    51%,
+    7% {
+        opacity: 1
+    }
+
+    62%,
+    84% {
+        opacity: .2
+    }
+
+    73% {
+        opacity: .8
+    }
+}
+
+@keyframes swingCrashBack {
+    0% {
+        transform: scaleX(1.1) rotate(106deg);
+    }
+}
+
+/*animacion pedal la parte frontal*/
+.hitPedal {
+    animation: .2s .1ms pedalUp;
+}
+
+@keyframes pedalUp {
+    0% {
+        transform: scaleY(.9);
+        filter: brightness(.8);
+    }
+}
+
+/*animacion de la cabeza del pedal */
+.hitBeater {
+    animation: .2s .1ms beaterUp;
+}
+
+.hitCrash {
+    animation: 2s .1ms swingCrash
+}
+
+@keyframes beaterUp {
+    0% {
+        transform: rotate(-30deg);
+    }
+}
+
 
 
 .instrument-container__stick1 {
@@ -320,6 +381,7 @@
     filter: brightness(0.5);
 }
 
+
 @media (min-width: 400px) {
     .instrument-container--desktop {
         height: 40rem;
@@ -349,6 +411,29 @@
         transform: scale(0.94) !important;
         filter: brightness(0.5);
     }
+
+    .right-drumstick {
+        background-image: url(../../../public/assets/drum/stick-1.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 24%;
+        width: 1%;
+        top: 68%;
+        left: 50%
+    }
+
+    .left-drumstick {
+        background-image: url(../../../public/assets/drum/stick-1.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 24%;
+        width: 1%;
+        top: 60%;
+        left: 40%
+    }
+
 
     .drumstickAnimate {
         animation: drumstick-animation 0.15s ease-in-out;
@@ -380,10 +465,6 @@
         animation: .35s .1ms backwards drumstick-animation;
     }
 
-    .hitCrash {
-        animation: 2s .1ms swingCrash
-    }
-
     @keyframes swingCrash {
 
         0%,
@@ -407,10 +488,6 @@
         73% {
             opacity: .8
         }
-    }
-
-    .hitCrashBack {
-        animation: 2s .1ms swingCrashBack
     }
 
     @keyframes swingCrashBack {
@@ -448,27 +525,10 @@
         }
     }
 
-    /*animacion pedal la parte frontal*/
-    .hitPedal {
-        animation: .2s .1ms pedalUp;
-    }
+    .pedal-face {
+        background-size: 40%;
+        background-position: 55% 45%;
 
-    @keyframes pedalUp {
-        0% {
-            transform: scaleY(.8);
-            filter: brightness(.8);
-        }
-    }
-
-    /*animacion de la cabeza del pedal */
-    .hitBeater {
-        animation: .2s .1ms beaterUp;
-    }
-
-    @keyframes beaterUp {
-        0% {
-            transform: scaleY(.25);
-        }
     }
 
     .instrument-container--desktop {
@@ -709,8 +769,8 @@
 
     .instrument-container__toom--two {
         height: 28%;
-        margin-top: 6%;
-        margin-left: 48%;
+        margin-top: 5%;
+        margin-left: 50%;
     }
 
     .instrument-container__toom--three {
@@ -772,27 +832,11 @@
     }
 
     .instrument-container__pedal {
-        margin-top: 32%;
+        margin-top: 35%;
         margin-left: 43%;
     }
 
-    .head-pedal {
-        background: url(../../../public/assets/drum/pedal-cabeza.png) no-repeat;
-        background-size: 35%;
-        background-position: 68% 0;
-        width: 70%;
-        z-index: 1;
-        height: 70%;
-    }
 
-    .pedal-face {
-        background: url(../../../public/assets/drum/pedal-frontal.png) no-repeat;
-        background-size: 40%;
-        background-position: 55% 45%;
-        width: 100%;
-        height: 100%;
-
-    }
 
     .instrument-container__stick1,
     .instrument-container__stick2 {
