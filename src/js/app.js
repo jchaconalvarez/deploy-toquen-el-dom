@@ -108,6 +108,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const crashTwoBack = document.querySelector(".cymbal-crash--two-back");
 
   const pedal = document.querySelector(".instrument-container__pedal");
+  const headPedal = document.querySelector(".head-pedal");
+  const bodyPedal = document.querySelector(".pedal-face");
   //Baquetas
   const rightStick = document.querySelector(".right-drumstick")
   const leftStick = document.querySelector(".left-drumstick")

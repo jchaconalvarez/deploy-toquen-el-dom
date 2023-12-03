@@ -2,7 +2,9 @@
   "name": "toquen-el-dom",
   "version": "1.0.0",
   "description": "Proyecto de escuela musical",
+  "homepage": "./",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "test": "tests"
   },
