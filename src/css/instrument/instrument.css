@@ -448,6 +448,29 @@
         }
     }
 
+    /*animacion pedal la parte frontal*/
+    .hitPedal {
+        animation: .2s .1ms pedalUp;
+    }
+
+    @keyframes pedalUp {
+        0% {
+            transform: scaleY(.8);
+            filter: brightness(.8);
+        }
+    }
+
+    /*animacion de la cabeza del pedal */
+    .hitBeater {
+        animation: .2s .1ms beaterUp;
+    }
+
+    @keyframes beaterUp {
+        0% {
+            transform: scaleY(.25);
+        }
+    }
+
     .instrument-container--desktop {
         box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px 0px;
         background-image: url(../../../public/assets/drum/fondo.jpg);
@@ -737,8 +760,9 @@
 
     .instrument-container__openhh {
         margin-left: 8%;
-        margin-top: 35%;
+        margin-top: 38%;
         height: 23%;
+        z-index: 7;
     }
 
     .instrument-container__closehh {
@@ -750,6 +774,24 @@
     .instrument-container__pedal {
         margin-top: 32%;
         margin-left: 43%;
+    }
+
+    .head-pedal {
+        background: url(../../../public/assets/drum/pedal-cabeza.png) no-repeat;
+        background-size: 35%;
+        background-position: 68% 0;
+        width: 70%;
+        z-index: 1;
+        height: 70%;
+    }
+
+    .pedal-face {
+        background: url(../../../public/assets/drum/pedal-frontal.png) no-repeat;
+        background-size: 40%;
+        background-position: 55% 45%;
+        width: 100%;
+        height: 100%;
+
     }
 
     .instrument-container__stick1,
