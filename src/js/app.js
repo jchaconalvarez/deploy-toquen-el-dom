@@ -29,8 +29,9 @@ const stickFloorLeft = document.querySelector(".drumstick--floorLeft")
 const rightStick = document.querySelector(".right-drumstick")
 const leftStick = document.querySelector(".left-drumstick")
 
+
+
 const positionTicks = (instrument, stick, space = 0) => {
-  // Necesito la posicion del instrumento a donde se moverá el element
   const coords = instrument.getBoundingClientRect()
   // obtengo la coordenada del centro del instrumento
   const center = coords.width / 2
@@ -47,43 +48,51 @@ const positionTicks = (instrument, stick, space = 0) => {
 }
 
 const playInstrumentSound = (instrument) => {
-  const audio = instrument.children[0];
-  audio.load();
+  // Recupero el audio previamente cargado en el onload
+  let audio = audioInstances[instrument.children[0].src];
+  audio.currentTime = 0;
   audio.play();
 }
 
-const playBassDrums = (instrument, stick, space = 0) => {
-
-  // Condicional para arreglar conflicto con la animación del kick
-  if (stick) {
-    // posiciono al stick respecto al elemento que toco.
-    positionTicks(instrument, stick, space)
-    stick.classList.add("drumstickAnimate")
-  }
-
-  // ejecuto el sonido
-  playInstrumentSound(instrument)
-
-  instrument.classList.add("animation-style");
-
+const animateStick = (stick) => {
+  stick.classList.add("drumstickAnimate")
   setTimeout(() => {
-    if (stick) stick.classList.remove("drumstickAnimate")
+    stick.classList.remove("drumstickAnimate")
+  }, 150);
+}
+
+const animateKickAndToms = (instrument) => {
+  instrument.classList.add("animation-style");
+  setTimeout(() => {
     instrument.classList.remove("animation-style");
-  }, 50);
-};
+  }, 150);
+}
 
-const playCymbals = (instrument, imgBack, stick, space = 0) => {
-
-  playInstrumentSound(instrument)
-  positionTicks(instrument, stick, space)
+const animateCymbals = (instrument, imgBack) => {
   instrument.classList.remove("hitCrashBack");
   imgBack.classList.remove("hitCrash")
-  stick.classList.add("drumstickAnimate")
   setTimeout(() => {
     instrument.classList.add("hitCrashBack");
     imgBack.classList.add("hitCrash")
-    stick.classList.remove("drumstickAnimate")
-  }, 1);
+  }, 150);
+}
+const playKickInstrument = (instrument) => {
+  playInstrumentSound(instrument)
+  animateKickAndToms(instrument)
+}
+
+const playBassDrums = (instrument, stick, space = 0) => {
+  positionTicks(instrument, stick, space)
+  playInstrumentSound(instrument)
+  animateStick(stick)
+  animateKickAndToms(instrument)
+};
+
+const playCymbals = (instrument, imgBack, stick, space = 0) => {
+  playInstrumentSound(instrument)
+  positionTicks(instrument, stick, space)
+  animateStick(stick)
+  animateCymbals(instrument, imgBack)
 };
 
 document.addEventListener("keypress", function (event) {
@@ -113,28 +122,28 @@ document.addEventListener("keypress", function (event) {
   }
   //Cymbals start
   if (event.code == "KeyQ" || event.code == "KeyW") {
-    playCymbals(crashOne, leftStick, 50);
+    playCymbals(crashOne, crashOneBack, leftStick, 50);
   }
 
   if (event.code == "KeyT" || event.code == "KeyY") {
-    playCymbals(crashTwo, leftStick, 50);
+    playCymbals(crashTwo, crashTwoBack, leftStick, 50);
   }
 
   if (event.code == "KeyI") {
-    playCymbals(ride, leftStick, 50);
+    playCymbals(ride, rideBack, leftStick, 50);
   }
 
   if (event.code == "KeyX") {
-    playCymbals(closeHh, leftStick, 50);
+    playCymbals(closeHh, closeHhBack, leftStick, 50);
   }
 
   if (event.code == "KeyZ") {
-    playCymbals(openHh, leftStick, 50);
+    playCymbals(openHh, openHhBack, leftStick, 50);
   }
 });
 document.addEventListener("DOMContentLoaded", () => {
-  kick.addEventListener("mousedown", () => playBassDrums(kick));
-  pedal.addEventListener("mousedown", () => playBassDrums(kick));
+  kick.addEventListener("mousedown", () => playKickInstrument(kick));
+  pedal.addEventListener("mousedown", () => playKickInstrument(kick));
   snare.addEventListener("mousedown", () => playBassDrums(snare, rightStick));
   floor.addEventListener("mousedown", () => playBassDrums(floor, rightStick));
   tomOne.addEventListener("mousedown", () => playBassDrums(tomOne, rightStick));
@@ -147,4 +156,14 @@ document.addEventListener("DOMContentLoaded", () => {
   openHh.addEventListener("mousedown", () => playCymbals(openHh, openHhBack, rightStick));
 
 })
+// Pre-cargamos los sonidos para que no exista delay al tocarlos
+let audioInstances = {};
+window.onload = () => {
+  let audioElements = document.querySelectorAll('audio');
+  audioElements.forEach((audioElement) => {
+    let audio = new Audio(audioElement.src);
+    audio.load();
+    audioInstances[audioElement.src] = audio;
+  });
+};
 
