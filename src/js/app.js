@@ -4,11 +4,22 @@ const floor = document.querySelector(".instrument-container__floor");
 const tomOne = document.querySelector(".instrument-container__toom--one");
 const tomTwo = document.querySelector(".instrument-container__toom--two");
 const tomThree = document.querySelector(".instrument-container__toom--three");
+//aqui estan las constantes de la animacion
 const ride = document.querySelector(".instrument-container__ride");
+const rideBack = document.querySelector(".cymbal-ride-back");
+
 const closeHh = document.querySelector(".instrument-container__closehh");
+const closeHhBack = document.querySelector(".cymbal-closehh-back");
+
 const openHh = document.querySelector(".instrument-container__openhh");
+const openHhBack = document.querySelector(".cymbal-openhh-back");
+
 const crashOne = document.querySelector(".instrument-container__crash--one");
+const crashOneBack = document.querySelector(".cymbal-crash--one-back");
+
 const crashTwo = document.querySelector(".instrument-container__crash--two");
+const crashTwoBack = document.querySelector(".cymbal-crash--two-back");
+
 const pedal = document.querySelector(".instrument-container__pedal");
 //Baquetas
 const stickFloorRight = document.querySelector(".drumstick--floorRight")
@@ -58,19 +69,21 @@ const playBassDrums = (instrument, stick, space = 0) => {
   setTimeout(() => {
     if (stick) stick.classList.remove("drumstickAnimate")
     instrument.classList.remove("animation-style");
-  }, 10);
+  }, 50);
 };
 
-const playCymbals = (instrument, stick, space = 0) => {
+const playCymbals = (instrument, imgBack, stick, space = 0) => {
 
   playInstrumentSound(instrument)
   positionTicks(instrument, stick, space)
-  instrument.classList.remove("crash-two-hover");
+  instrument.classList.remove("hitCrashBack");
+  imgBack.classList.remove("hitCrash")
   stick.classList.add("drumstickAnimate")
   setTimeout(() => {
-    instrument.classList.add("crash-two-hover");
+    instrument.classList.add("hitCrashBack");
+    imgBack.classList.add("hitCrash")
     stick.classList.remove("drumstickAnimate")
-  }, 10);
+  }, 1);
 };
 
 document.addEventListener("keypress", function (event) {
@@ -127,11 +140,11 @@ document.addEventListener("DOMContentLoaded", () => {
   tomOne.addEventListener("mousedown", () => playBassDrums(tomOne, rightStick));
   tomTwo.addEventListener("mousedown", () => playBassDrums(tomTwo, rightStick));
   tomThree.addEventListener("mousedown", () => playBassDrums(tomThree, rightStick));
-  crashOne.addEventListener("mousedown", () => playCymbals(crashOne, rightStick));
-  crashTwo.addEventListener("mousedown", () => playCymbals(crashTwo, rightStick));
-  ride.addEventListener("mousedown", () => playCymbals(ride, rightStick));
-  closeHh.addEventListener("mousedown", () => playCymbals(closeHh, rightStick));
-  openHh.addEventListener("mousedown", () => playCymbals(openHh, rightStick));
+  crashOne.addEventListener("mousedown", () => playCymbals(crashOne, crashOneBack, rightStick));
+  crashTwo.addEventListener("mousedown", () => playCymbals(crashTwo, crashTwoBack, rightStick));
+  ride.addEventListener("mousedown", () => playCymbals(ride, rideBack, rightStick));
+  closeHh.addEventListener("mousedown", () => playCymbals(closeHh, closeHhBack, rightStick));
+  openHh.addEventListener("mousedown", () => playCymbals(openHh, openHhBack, rightStick));
 
 })
 
