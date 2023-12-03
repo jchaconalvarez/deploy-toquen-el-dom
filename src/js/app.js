@@ -20,6 +20,7 @@ const positionTicks = (instrument, stick, space = 0) => {
 
 const playInstrumentSound = (instrument) => {
   // Recupero el audio previamente cargado en el onload
+
   const audioSrc = instrument.children[0].src
   let audio = audioInstances[audioSrc];
   console.log({ audio, audioSrc, audioInstances })
@@ -50,9 +51,20 @@ const animateCymbals = (instrument, imgBack) => {
   }, 150);
 }
 
-const playKickInstrument = (instrument) => {
+const animationKick = (head, body, instrument) => {
+  head.classList.remove("hitBeater");
+  body.classList.remove("hitPedal");
+  instrument.classList.add("animation-style");
+  setTimeout(() => {
+    head.classList.add("hitBeater");
+    body.classList.add("hitPedal");
+    instrument.classList.remove("animation-style");
+  }, 150)
+}
+
+const playKickInstrument = (head, body, instrument) => {
   playInstrumentSound(instrument)
-  animateKickAndToms(instrument)
+  animationKick(head, body, instrument)
 }
 
 const playBassDrums = (instrument, stick, space = 0) => {
@@ -116,8 +128,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  kick.addEventListener("mousedown", () => playKickInstrument(kick));
-  pedal.addEventListener("mousedown", () => playKickInstrument(kick));
+  kick.addEventListener("mousedown", () => playKickInstrument(headPedal, bodyPedal, kick));
+  pedal.addEventListener("mousedown", () => playKickInstrument(headPedal, bodyPedal, kick));
   snare.addEventListener("mousedown", () => playBassDrums(snare, rightStick));
   floor.addEventListener("mousedown", () => playBassDrums(floor, rightStick));
   tomOne.addEventListener("mousedown", () => playBassDrums(tomOne, rightStick));
@@ -176,19 +188,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 })
-// Pre-cargamos los sonidos para que no exista delay al tocarlos
-
-
-// window.onload = () => {
-//   let audioElements = document.querySelectorAll('audio');
-
-//   audioElements.forEach((audioElement) => {
-//     const ulrAudio = audioElement.src
-//     let audio = new Audio(ulrAudio); // te crea un elemento audio
-
-//     audio.load();
-//     audioInstances[ulrAudio] = audio;
-
-//   });
-// };
 export { playBassDrums, playCymbals, playKickInstrument, playInstrumentSound }
