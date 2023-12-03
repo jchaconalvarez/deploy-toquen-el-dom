@@ -22,10 +22,6 @@ const crashTwoBack = document.querySelector(".cymbal-crash--two-back");
 
 const pedal = document.querySelector(".instrument-container__pedal");
 //Baquetas
-const stickFloorRight = document.querySelector(".drumstick--floorRight")
-const stickFloorLeft = document.querySelector(".drumstick--floorLeft")
-
-//test
 const rightStick = document.querySelector(".right-drumstick")
 const leftStick = document.querySelector(".left-drumstick")
 
@@ -49,7 +45,8 @@ const positionTicks = (instrument, stick, space = 0) => {
 
 const playInstrumentSound = (instrument) => {
   // Recupero el audio previamente cargado en el onload
-  let audio = audioInstances[instrument.children[0].src];
+  const audioSrc = instrument.children[0].src
+  let audio = audioInstances[audioSrc];
   audio.currentTime = 0;
   audio.play();
 }
@@ -158,12 +155,18 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 // Pre-cargamos los sonidos para que no exista delay al tocarlos
 let audioInstances = {};
+
 window.onload = () => {
   let audioElements = document.querySelectorAll('audio');
+
   audioElements.forEach((audioElement) => {
-    let audio = new Audio(audioElement.src);
+    const ulrAudio = audioElement.src
+    let audio = new Audio(ulrAudio); // te crea un elemento audio
+
     audio.load();
-    audioInstances[audioElement.src] = audio;
+    audioInstances[ulrAudio] = audio;
+
   });
 };
 
+console.log(audioInstances)
