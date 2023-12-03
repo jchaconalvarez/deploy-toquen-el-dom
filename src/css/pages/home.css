@@ -1,5 +1,3 @@
-@import url(./base.css);
-
 /*Probablemente lo de "figure, h1, h2, p" estaría bien ponerlo dentro de "base":*/
 
 figure,
@@ -124,12 +122,14 @@ a.container-home__hero-text-block__primary-button:hover {
 .container-home__hero-figure img {
   width: 100%;
 }
+
 .container-home__gallery__row__card {
   flex-direction: column;
 }
 
 /* Desktop version */
 @media (min-width: 1000px) {
+
   figure,
   img {
     display: block;
