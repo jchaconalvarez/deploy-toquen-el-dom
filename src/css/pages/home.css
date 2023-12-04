@@ -81,8 +81,8 @@ a.container-home__hero-text-block__primary-button:hover {
 .container-home__gallery__row {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .container-home__gallery__row__card {
