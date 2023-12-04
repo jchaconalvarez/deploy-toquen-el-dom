@@ -38,6 +38,7 @@ a.in-construction__content--primary-button {
   text-decoration: none;
   transition: all 300ms ease-in-out;
 }
+
 a.in-construction__content--primary-button:hover {
   background-color: var(--primary-dark);
   transition: all 300ms ease-in-out;
@@ -49,11 +50,13 @@ section.in-construction__content {
 }
 
 @media (min-width: 1000px) {
+
   .main-construction-piano,
   .main-construction-guitar,
   .main-construction-accordeon {
-    background-position: right;
+    background-position: right bottom;
   }
+
   section.in-construction__content {
     margin: 14rem auto;
     max-width: 1440px;
@@ -68,4 +71,13 @@ section.in-construction__content {
   a.in-construction__content--primary-button {
     display: inline-block;
   }
+}
+
+@media (min-width: 1000px) {
+  section.in-construction__content {
+    margin: 16rem auto;
+    max-width: 1440px;
+    padding: 1rem 4rem 0rem 4rem;
+  }
+
 }
