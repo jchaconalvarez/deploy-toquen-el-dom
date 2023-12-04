@@ -1,35 +1,23 @@
 import { describe, expect, it, beforeAll, vi } from 'vitest'
 import { JSDOM } from 'jsdom'
-import * as app from '../src/js/app'
+import { playBassDrums, playCymbals, playKickInstrument } from '../src/js/app.js'
 
-vi.mock('../src/js/app.js', async (importOriginal) => {
-    const app = await importOriginal()
-    console.log(app)
-    return {
-        ...app,
-        // replace some exports
-        playInstrumentSound: vi.fn().mockImplementation(() => { }),
-        audioInstances: {
-            'ruta_del_audio_kick.mp3': { play: vi.fn(), currentTime: 0 },
-            'ruta_del_audio_cymbal.mp3': { play: vi.fn(), currentTime: 0 },
-        },
-    }
-})
 describe('Instrument test', () => {
     let dom
     let window
     let document
-    let snare
     let stick
 
     beforeAll(async () => {
+        // Inicializo los fake timer para poder usar el advanceTimersByTime para simular el paso del tiempo
+        vi.useFakeTimers()
+        // Cargo el DOM
         dom = await JSDOM.fromFile('pages/instrument.html', {
             resources: "usable",
             runScripts: "dangerously",
         })
         window = dom.window
         document = dom.window.document
-        snare = document.querySelector(".instrument-container__snare")
         stick = document.querySelector(".left-drumstick")
     })
 
@@ -56,19 +44,6 @@ describe('Instrument test', () => {
         expect(typeof playBassDrums).toBe("function")
     })
 
-    it.only("", () => {
-
-        // playBassDrums(snare, stick)
-        console.log({ playInstrumentSound })
-        let a = snare.classList.contain("animate-style")
-
-
-    })
-
-
-
-
-
     it("should exist the function playCymbals", () => {
         expect(playCymbals).toBeDefined()
         expect(typeof playCymbals).toBe("function")
@@ -76,6 +51,24 @@ describe('Instrument test', () => {
     it("should exist the function playKickInstrument", () => {
         expect(playKickInstrument).toBeDefined()
         expect(typeof playKickInstrument).toBe("function")
+    })
+    it("should add animation class if playBassDrums is called", async () => {
+        const snare = document.querySelector(".instrument-container__snare")
+        playBassDrums(snare, stick, 50)
+        expect(snare.classList.contains("animation-style")).toBe(true)
+        // Simulo el paso del tiempo
+        await vi.advanceTimersByTimeAsync(150)
+        expect(snare.classList.contains("animation-style")).toBe(false)
+    })
+    it("should add animation class if playCymballs is called ", async () => {
+
+        const crashOne = document.querySelector(".instrument-container__crash--one")
+        const cymbalOneBack = document.querySelector(".cymbal-crash--one-back")
+        playCymbals(crashOne, cymbalOneBack, stick, 50)
+        expect(cymbalOneBack.classList.contains("hitCrash")).toBe(false)
+        // Simulo el paso del tiempo para que se ejecute el setTimeout
+        await vi.advanceTimersByTimeAsync(150)
+        expect(cymbalOneBack.classList.contains("hitCrash")).toBe(true)
     })
 })
 
