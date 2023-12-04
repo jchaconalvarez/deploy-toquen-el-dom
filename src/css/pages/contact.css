@@ -118,11 +118,11 @@
 /*contactpage desktop */
 @media (min-width: 1000px) {
 
-    .container-contact-main{
+    .container-contact-main {
         background-color: var(--primary-light);
         display: flex;
         flex-direction: column;
-    } 
+    }
 
     .container-contact-background {
         display: flex;
@@ -149,7 +149,11 @@
         display: flex;
         align-items: center;
         min-width: 568px;
-        
+
+    }
+
+    .container-contact__hero-form-block {
+        margin-bottom: 4rem;
     }
 
     .container-contact__hero-form-block__primary-button {

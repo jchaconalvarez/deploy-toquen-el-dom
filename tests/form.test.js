@@ -1,54 +1,59 @@
 import { describe, expect, it, beforeAll } from 'vitest'
 import { JSDOM } from 'jsdom'
-
-
-// console.log(nameForm)
-
+import { handleSubmit } from '../src/js/form'
 describe("contact page test", () => {
     let dom
     let window
-   
-    
+
     beforeAll(async () => {
         dom = await JSDOM.fromFile("pages/contact.html", {
-            resources: "usable", 
+            resources: "usable",
             runScripts: "dangerously"
         })
         window = dom.window
         document = dom.window.document
     })
 
-     it("should render css", async () => {
+    it("should render css", async () => {
         let document = dom.window.document;
         let link = document.querySelector("link");
         expect(link.href).toMatch(/base.css$/);
-      });
+    });
 
-    test('Form should be sent correctly', () => {
+    test('should show a success message if fields are filled', () => {
         // Simular valores válidos en los campos del formulario
-        let nameForm = document.getElementById('name').value;
-        let emailForm = document.getElementById('email').value;
-        let consultationForm = document.querySelector('textarea[name="consultation"]').value;
-        let contactForm = document.querySelector('#contactForm').value;
+        let nameForm = document.getElementById('name');
+        let emailForm = document.getElementById('email');
+        let consultationForm = document.querySelector('textarea[name="consultation"]');
+        let contactForm = document.querySelector('#contactForm');
+        let message = document.getElementById('message')
 
-        console.log(contactForm)
-        console.log(document.getElementById('name').value)
-        
-        nameForm.value = " ";
-        emailForm.value = " " ;
-        consultationForm.value = " ";
-    
-        // Simular el envío del formulario
-        contactForm.dispatchEvent(new Event('submit'));
-    
-        // Verificar que el mensaje de éxito está presente
-        const successMessage = document.getElementById('message');
-        expect(successMessage.innerHTML).toContain('Formulario enviado correctamente!');
-    
+        nameForm = "test"
+        emailForm = "test@gmail.com"
+        consultationForm = "Quiero info..."
+
+        handleSubmit(nameForm, emailForm, consultationForm, contactForm, message)
+
         // Verificar que el formulario se ha ocultado
-        expect(contactForm.style.display).toBe('none');
+        expect(message.innerHTML).toMatch(/Formulario enviado correctamente!/);
+    });
+    test('should show a error message if fields are empty', () => {
+        // Simular valores válidos en los campos del formulario
+        let nameForm = document.getElementById('name');
+        let emailForm = document.getElementById('email');
+        let consultationForm = document.querySelector('textarea[name="consultation"]');
+        let contactForm = document.querySelector('#contactForm');
+        let message = document.getElementById('message')
+
+        nameForm = ""
+        emailForm = "test@gmail.com"
+        consultationForm = "Quiero info..."
+
+        handleSubmit(nameForm, emailForm, consultationForm, contactForm, message)
+
+        // Verificar que el formulario se ha ocultado
+        expect(message.innerHTML).toMatch(/Por favor, complete todos los campos/);
     });
 })
 
 
-    

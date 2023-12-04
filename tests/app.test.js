@@ -1,6 +1,7 @@
 import { describe, expect, it, beforeAll, vi } from 'vitest'
 import { JSDOM } from 'jsdom'
 import { playBassDrums, playCymbals, playKickInstrument } from '../src/js/app.js'
+import { handleClickAccordeon } from '../src/js/accordeon.js'
 
 describe('Instrument test', () => {
     let dom
@@ -69,6 +70,15 @@ describe('Instrument test', () => {
         // Simulo el paso del tiempo para que se ejecute el setTimeout
         await vi.advanceTimersByTimeAsync(150)
         expect(cymbalOneBack.classList.contains("hitCrash")).toBe(true)
+    })
+
+    describe("accordeon test", () => {
+        it.only("should render the accordeon body after click header", () => {
+            const accordeon = document.querySelector(".item-1 > .accordion--item-header")
+            handleClickAccordeon(accordeon)
+            expect(accordeon.classList.contains("active")).toBe(true)
+
+        })
     })
 })
 

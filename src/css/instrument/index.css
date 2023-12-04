@@ -51,11 +51,6 @@
     margin: 4.2rem 0 3rem;
 }
 
-.instrument-content__keyword img {
-    max-width: 80%;
-    margin: 0 auto;
-}
-
 .instrument-content__description {
     margin-bottom: 2rem;
 }
@@ -91,10 +86,6 @@
         margin: 0 auto;
         padding: 3rem 4rem;
 
-    }
-
-    .keyword-movil {
-        display: none;
     }
 
     .instrument-content__subtitle {
