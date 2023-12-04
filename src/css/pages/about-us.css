@@ -81,8 +81,8 @@ a.container-about-us__hero-text-block__primary-button:hover {
 .container-about-us__gallery__row {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 2rem;
+  margin-bottom: 0rem;
 }
 
 .container-about-us__gallery__row__card {
@@ -103,7 +103,6 @@ a.container-about-us__hero-text-block__primary-button:hover {
 
 .container-about-us__gallery__row__card__figure img {
   border-radius: 1.5rem 1.5rem;
-  cursor: pointer;
   max-width: 400px;
 }
 
@@ -168,9 +167,9 @@ a.container-about-us__hero-text-block__primary-button:hover {
 
   /* Start gallery section */
   .container-about-us__gallery {
+    flex-wrap: wrap;
     max-width: 1440px;
     padding: 3rem 4rem;
-    flex-wrap: wrap;
   }
 
   .container-about-us__gallery__row {
@@ -180,7 +179,7 @@ a.container-about-us__hero-text-block__primary-button:hover {
   .container-about-us__gallery__row__card {
     flex-direction: row;
     gap: 1.5rem;
-    max-width: 49%;
+    width: 49%;
   }
 
   figure.container-about-us__gallery__row__card__figure img {
@@ -212,7 +211,6 @@ a.container-about-us__hero-text-block__primary-button:hover {
     padding-right: 1rem;
   }
 
-  
   /* Card backgrounds */
 
   .pastel-green {
@@ -228,6 +226,6 @@ a.container-about-us__hero-text-block__primary-button:hover {
   }
 
   .pastel-red {
-    background-color: #FFE2E3;
+    background-color: #ffe2e3;
   }
 }
