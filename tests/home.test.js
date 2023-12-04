@@ -74,6 +74,40 @@ describe("page home test", () => {
 
     }) 
 
+    it("Instagram button should link to instagram page", () => {
+        let linkInstagram = document.querySelector(".icons-footer a:first-child")
+        expect(linkInstagram.href).toEqual("https://www.instagram.com/");  
+
+    }) 
+
+    it("Twitter button should link to twitter page", () => {
+        let linkTwitter = document.querySelector(".icons-footer a:nth-child(2)")
+        expect(linkTwitter.href).toEqual("https://twitter.com/?lang=es");  
+
+    })
+    
+    it("Facebook button should link to facebook page", () => {
+        let linkFacebook = document.querySelector(".icons-footer a:nth-child(3)")
+        expect(linkFacebook.href).toEqual("https://www.facebook.com/");  
+
+    })
+
+    it("LinkedIn button should link to LinkedIn page", () => {
+        let linkLinkedIn = document.querySelector(".icons-footer a:nth-child(4)")
+        expect(linkLinkedIn.href).toEqual("https://www.linkedin.com/");  
+
+    })
+
+    it("YouTube button should link to YouTube page", () => {
+        let linkYouTube = document.querySelector(".icons-footer a:nth-child(5)")
+        expect(linkYouTube.href).toEqual("https://www.youtube.com/");  
+
+    })
+    
+    
+
 })
+
+
 
 
