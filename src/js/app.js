@@ -1,6 +1,19 @@
 
 
 export let audioInstances = {};
+
+export const loadAudio = () => {
+  let audioElements = document.querySelectorAll('audio');
+
+  audioElements.forEach((audioElement) => {
+    const ulrAudio = audioElement.src
+    let audio = new Audio(ulrAudio); // te crea un elemento audio
+
+    audio.load();
+    audioInstances[ulrAudio] = audio;
+
+  });
+}
 const positionTicks = (instrument, stick, space = 0) => {
   const coords = instrument.getBoundingClientRect()
   // obtengo la coordenada del centro del instrumento
@@ -14,18 +27,7 @@ const positionTicks = (instrument, stick, space = 0) => {
   stick.style.top = center + posicionTop + "px"
   stick.style.left = center - space + posicionLeft + "px"
   stick.style.zIndex = 9
-  console.log({ instrument, stick })
 
-}
-
-const playInstrumentSound = (instrument) => {
-  // Recupero el audio previamente cargado en el onload
-
-  const audioSrc = instrument.children[0].src
-  let audio = audioInstances[audioSrc];
-  console.log({ audio, audioSrc, audioInstances })
-  audio.currentTime = 0;
-  audio.play();
 }
 
 const animateStick = (stick) => {
@@ -51,15 +53,18 @@ const animateCymbals = (instrument, imgBack) => {
   }, 150);
 }
 
-const animationKick = (head, body, instrument) => {
-  head.classList.remove("hitBeater");
-  body.classList.remove("hitPedal");
-  instrument.classList.add("animation-style");
-  setTimeout(() => {
-    head.classList.add("hitBeater");
-    body.classList.add("hitPedal");
-    instrument.classList.remove("animation-style");
-  }, 150)
+
+export const playInstrumentSound = (instrument) => {
+  // Recupero el audio previamente cargado en el onload
+  const audioSrc = instrument.children[0].src
+  let audio = audioInstances[audioSrc];
+  if (!audio) {
+    instrument.children[0].load();
+    instrument.children[0].play();
+    return;
+  }
+  audio.currentTime = 0;
+  audio.play();
 }
 
 const playKickInstrument = (head, body, instrument) => {
@@ -74,6 +79,19 @@ const playBassDrums = (instrument, stick, space = 0) => {
   animateKickAndToms(instrument)
 };
 
+
+const animationKick = (head, body, instrument) => {
+  head.classList.remove("hitBeater");
+  body.classList.remove("hitPedal");
+  instrument.classList.add("animation-style");
+  setTimeout(() => {
+    head.classList.add("hitBeater");
+    body.classList.add("hitPedal");
+    instrument.classList.remove("animation-style");
+  }, 150)
+}
+
+
 const playCymbals = (instrument, imgBack, stick, space = 0) => {
   playInstrumentSound(instrument)
   positionTicks(instrument, stick, space)
@@ -83,21 +101,10 @@ const playCymbals = (instrument, imgBack, stick, space = 0) => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-
-
-  let audioElements = document.querySelectorAll('audio');
-
-  audioElements.forEach((audioElement) => {
-    const ulrAudio = audioElement.src
-    let audio = new Audio(ulrAudio); // te crea un elemento audio
-
-    audio.load();
-    audioInstances[ulrAudio] = audio;
-
-  });
+  // Cargamos los audios
+  loadAudio()
 
   const kick = document.querySelector(".instrument-container__kick");
-
   const snare = document.querySelector(".instrument-container__snare");
   const floor = document.querySelector(".instrument-container__floor");
   const tomOne = document.querySelector(".instrument-container__toom--one");
@@ -188,4 +195,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 })
-export { playBassDrums, playCymbals, playKickInstrument, playInstrumentSound }
+export { playBassDrums, playCymbals, playKickInstrument }
