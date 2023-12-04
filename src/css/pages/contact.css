@@ -117,26 +117,39 @@
 
 /*contactpage desktop */
 @media (min-width: 1000px) {
-    .container-contact-background {
+
+    .container-contact-main{
         background-color: var(--primary-light);
         display: flex;
+        flex-direction: column;
+    } 
+
+    .container-contact-background {
+        display: flex;
         flex-direction: row;
-        padding: 5rem 4rem 5rem 4rem;
         justify-content: center;
+        gap: 4rem;
+        padding: 1rem 4rem 0rem 4rem;
+        max-width: 1440px;
+        margin: 0 auto;
+
     }
 
     .container-contact {
-        width: 100%;
+        min-width: 600px;
     }
 
     .container-contact__main-title {
         font-size: 3rem;
-        padding-bottom: 4.25rem;
+        padding: 3rem 0 3rem 0;
     }
 
     .container-contact-background figure {
         display: initial;
-        padding: 8.5rem 0 0 7.5rem;
+        display: flex;
+        align-items: center;
+        min-width: 568px;
+        
     }
 
     .container-contact__hero-form-block__primary-button {
@@ -144,6 +157,7 @@
     }
 
     .container-contact-details {
+        background-color: white;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
