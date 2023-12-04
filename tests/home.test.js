@@ -19,7 +19,6 @@ describe("page home test", () => {
         document = dom.window.document
         button = document.querySelector(".container-home__hero-text-block__primary-button");
         buttonInstrument = document.querySelector(".green .container-home__gallery__row__card__secondary-button");
-        console.log(buttonInstrument)
     })
 
     it("should render css", async () => {
@@ -103,9 +102,6 @@ describe("page home test", () => {
         expect(linkYouTube.href).toEqual("https://www.youtube.com/");  
 
     })
-    
-    
-
 })
 
 
