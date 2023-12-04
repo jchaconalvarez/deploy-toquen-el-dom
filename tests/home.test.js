@@ -27,6 +27,26 @@ describe("page home test", () => {
         let link = document.querySelector("link");
         expect(link.href).toMatch(/base.css$/);
       });
+
+    it("logo should link to home"), () => {
+        let linkLogo = document.querySelector(".header a")
+        expect(linkLogo.href).toMatch(/index.html$/);
+    }
+
+    it("instruments link should link to instruments page"), () => {
+        let linkInstruments = document.querySelector("header__navbar--container-instruments")
+        expect(linkInstruments.href).toMatch(/instrument.html$/);
+    }
+
+    it("about us link should link to about us page"), () => {
+        let linkAbout = document.querySelector("header__navbar--container-about")
+        expect(linkAbout.href).toMatch(/about-us.html$/);
+    }
+
+     it("contact link should link to contact page"), () => {
+        let linkContact = document.querySelector("header__navbar--container-contact")
+        expect(linkContact.href).toMatch(/contact.html$/);
+    }
     
     it("should link to about us page", () => {
         expect(button.href).toMatch(/about-us.html$/);
