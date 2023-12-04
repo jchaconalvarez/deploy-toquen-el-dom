@@ -85,7 +85,7 @@ git clone https://github.com/tuusuario/fem-musica.git
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/d%C3%A9bora-sofia-menezes/) 
 
-🎤 Vicky Roberson : 
+🎤 Vicki Robertson: 
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vickirobertson/)
 
@@ -99,6 +99,6 @@ git clone https://github.com/tuusuario/fem-musica.git
 
 🎻 Gabriela Poves: 
 
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://es.linkedin.com/in/danicp)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://es.linkedin.com/)
 
 ¡Gracias por unirte a Fem Musica, donde la magia del código encuentra su ritmo y el DOM se convierte en una bateria virtual! 🎶
