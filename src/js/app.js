@@ -100,10 +100,11 @@ const playCymbals = (instrument, imgBack, stick, space = 0) => {
 };
 
 
+
 document.addEventListener("DOMContentLoaded", () => {
   // Cargamos los audios
   loadAudio()
-
+  const buttonPlay = document.querySelector(".button-reproducir")
   const kick = document.querySelector(".instrument-container__kick");
   const snare = document.querySelector(".instrument-container__snare");
   const floor = document.querySelector(".instrument-container__floor");
@@ -147,10 +148,62 @@ document.addEventListener("DOMContentLoaded", () => {
   ride.addEventListener("mousedown", () => playCymbals(ride, rideBack, rightStick));
   closeHh.addEventListener("mousedown", () => playCymbals(closeHh, closeHhBack, rightStick));
   openHh.addEventListener("mousedown", () => playCymbals(openHh, openHhBack, rightStick));
+
+  const PlayindDrum = () => {
+    playKickInstrument(headPedal, bodyPedal, kick)
+    playCymbals(closeHh, closeHhBack, leftStick)
+    setTimeout(() => {
+      playCymbals(closeHh, closeHhBack, rightStick)
+      setTimeout(() => {
+        playCymbals(closeHh, closeHhBack, rightStick)
+        playBassDrums(snare, leftStick)
+        setTimeout(() => {
+          playCymbals(closeHh, closeHhBack, rightStick)
+          setTimeout(() => {
+            playCymbals(closeHh, closeHhBack, rightStick)
+            playKickInstrument(headPedal, bodyPedal, kick)
+            setTimeout(() => {
+              playCymbals(closeHh, closeHhBack, rightStick)
+              setTimeout(() => {
+                playCymbals(closeHh, closeHhBack, rightStick)
+                playBassDrums(snare, leftStick)
+                setTimeout(() => {
+                  playCymbals(closeHh, closeHhBack, rightStick)
+                  setTimeout(() => {
+                    playCymbals(closeHh, closeHhBack, rightStick)
+                    playKickInstrument(headPedal, bodyPedal, kick)
+                  }, 400)
+                }, 400)
+              }, 400)
+            }, 400)
+          }, 400)
+        }, 400)
+      }, 400)
+    }, 400)
+  }
+  buttonPlay.addEventListener("click", () => {
+    setTimeout(() => {
+      PlayindDrum()
+      setTimeout(() => {
+        PlayindDrum()
+        setTimeout(() => {
+          PlayindDrum()
+          setTimeout(() => {
+            PlayindDrum()
+
+          }, 3900)
+
+        }, 3900)
+
+      }, 3900)
+    }, 1000)
+
+  })
+
   document.addEventListener("keypress", function (event) {
     //Drums start
     if (event.code == "KeyP") {
-      playBassDrums(kick);
+      playKickInstrument(headPedal, bodyPedal, kick); p
     }
 
     if (event.code == "KeyA") {
