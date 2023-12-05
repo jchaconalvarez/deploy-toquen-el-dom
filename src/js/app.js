@@ -181,24 +181,24 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 400)
     }, 400)
   }
-  buttonPlay.addEventListener("click", () => {
-    setTimeout(() => {
-      PlayindDrum()
-      setTimeout(() => {
-        PlayindDrum()
-        setTimeout(() => {
-          PlayindDrum()
-          setTimeout(() => {
-            PlayindDrum()
+  // buttonPlay.addEventListener("click", () => {
+  //   setTimeout(() => {
+  //     PlayindDrum()
+  //     setTimeout(() => {
+  //       PlayindDrum()
+  //       setTimeout(() => {
+  //         PlayindDrum()
+  //         setTimeout(() => {
+  //           PlayindDrum()
 
-          }, 3900)
+  //         }, 3900)
 
-        }, 3900)
+  //       }, 3900)
 
-      }, 3900)
-    }, 1000)
+  //     }, 3900)
+  //   }, 1000)
 
-  })
+  // })
 
   document.addEventListener("keypress", function (event) {
     //Drums start

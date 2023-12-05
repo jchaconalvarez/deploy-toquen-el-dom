@@ -53,6 +53,7 @@ describe('Instrument test', () => {
         expect(playKickInstrument).toBeDefined()
         expect(typeof playKickInstrument).toBe("function")
     })
+
     it("should add animation class if playBassDrums is called", async () => {
         const snare = document.querySelector(".instrument-container__snare")
         playBassDrums(snare, stick, 50)
@@ -61,6 +62,7 @@ describe('Instrument test', () => {
         await vi.advanceTimersByTimeAsync(150)
         expect(snare.classList.contains("animation-style")).toBe(false)
     })
+
     it("should add animation class if playCymballs is called ", async () => {
 
         const crashOne = document.querySelector(".instrument-container__crash--one")
