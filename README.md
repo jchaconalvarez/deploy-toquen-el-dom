@@ -62,7 +62,7 @@ npm test
 
 ### 🎵 Imagenes de la web
 
-![Vista previa del proyecto](./public/assets/img/Toquen-el-dom-page.png)
+![Vista previa del proyecto](./public/assets/img/fem-musica-page.png)
 
 
 ### 🎉 Contribuye con Fem Musica
