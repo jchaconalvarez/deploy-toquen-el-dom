@@ -9,10 +9,15 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "start": "node index.js",
+    "build": "vite build"
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "devDependencies": {
     "@testing-library/dom": "^9.3.3",
     "@testing-library/jest-dom": "^6.1.4",
