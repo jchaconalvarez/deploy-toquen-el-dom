@@ -12,7 +12,6 @@
     "test": "vitest",
     "build": "vite build",
     "serve": "vite preview"
-  }
   },
   "author": "",
   "license": "ISC",
