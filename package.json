@@ -10,7 +10,6 @@
   },
   "scripts": {
     "test": "vitest",
-    "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
   }
